@@ -1,13 +1,69 @@
+:root{
+  --main-color:#168ca5;
+  --second-color:#07434f;
+  --button-color:#07434f;
+  --background-color:#07434f;
+  
+  --main-gradient:linear-gradient(90deg, rgb(10, 106, 118) 0%, rgb(22, 87, 91) 50%, rgb(10, 106, 118) 100%);
+  --background-gradient:linear-gradient(90deg, rgb(5, 44, 49) 0%, rgb(10, 77, 80) 50%, rgb(5, 44, 49) 100%);
+}
+
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+body:lang(ar), 
+body :lang(ar) {
+  direction: rtl;
+}
+
+
+body:lang(en), 
+body :lang(en) {
+  direction: ltr;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+ 
+}
+
+p{
+  
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  
+}
+
+button:hover{
+ 
+}
+
+@media (max-width: 920px) {
+  
 }
