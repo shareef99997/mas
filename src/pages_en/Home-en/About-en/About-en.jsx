@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+
 import './About.css';
 
 function About_en() {

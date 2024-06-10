@@ -2,8 +2,8 @@
   --main-color:#168ca5;
   --second-color:#07434f;
   --button-color:#07434f;
-  --background-color:#07434f;
-  
+  --background-color:#93bac2;
+
   --main-gradient:linear-gradient(90deg, rgb(10, 106, 118) 0%, rgb(22, 87, 91) 50%, rgb(10, 106, 118) 100%);
   --background-gradient:linear-gradient(90deg, rgb(5, 44, 49) 0%, rgb(10, 77, 80) 50%, rgb(5, 44, 49) 100%);
 }

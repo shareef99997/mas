@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import './Header.css';
 import NavBar from './NavBar';
 
@@ -13,7 +13,7 @@ function Header() {
       <h2>h2: اهلا وسهلا </h2>
       <h3>h3: اهلا وسهلا </h3>
       <p>p: اهلا وسهلا </p>
-      <a href=""> اهلا وسهلا </a>
+      <a href="/"> اهلا وسهلا </a>
       <br />
       <br />
       <button> اهلا وسهلا </button>

@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+
 import './Header.css';
 import NAVBAR_EN from './NavBar-en';
 
@@ -12,7 +12,7 @@ function Header_en() {
       <h2>h2: Hello World </h2>
       <h3>h3: Hello World </h3>
       <p>p: Hello World </p>
-      <a href=""> Hello World </a>
+      <a href="/"> Hello World </a>
       <br />
       <br />
       <button> Hello World </button>
