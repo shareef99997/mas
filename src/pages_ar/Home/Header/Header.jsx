@@ -1,26 +1,25 @@
-
 import './Header.css';
-import NavBar from './NavBar';
+
 
 
 function Header() {
 
-
   return (
-    <header className="Home-Header" id="Header" >
-      <NavBar currentPage="home"/>
-      <h1>h1: اهلا وسهلا </h1>
-      <h2>h2: اهلا وسهلا </h2>
-      <h3>h3: اهلا وسهلا </h3>
-      <p>p: اهلا وسهلا </p>
-      <a href="/"> اهلا وسهلا </a>
-      <br />
-      <br />
-      <button> اهلا وسهلا </button>
-      <br />
-      <br />
-      <a href="/en/"> <button> English </button> </a>
-      
+    <header className="Home-Header" id="Header">
+      <div className="video-background">
+      {/* <video autoPlay muted loop className="header-video">
+        <source src={require('./../../../Assets/Videos/Riyadh_vid.mp4')} />
+        Your browser does not support the video tag.
+      </video> */}
+      </div>
+      <div className="overlay"></div>
+      <section className='Header-Body'>
+      <div className="home-content">
+          <h1>منظومة الصباح العقارية </h1>
+          <a href="#About"><button > سجل اهتمامك الآن </button></a>
+        </div>
+      </section>
+        
     </header>
   );
 }

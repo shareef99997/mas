@@ -1,0 +1,41 @@
+.Home-Header {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; 
+  background-color: rgba(0, 0, 0, 0.174);
+  transition: 1s ease;
+}
+
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire header */
+  z-index: -1; /* Place the video behind other content */
+  /* display: none; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.382); /* Semi-transparent black overlay */
+  z-index: 0; /* Ensure the overlay is on top of the video */
+}
+
+.Header-Body {
+  position: relative;
+  z-index: 1; 
+  
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  text-align: center; 
+  display: flex;
+}
