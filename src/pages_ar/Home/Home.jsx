@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Home.css';
 import HEADER from './Header/Header';
-import NAVBAR from './Header/NavBar';
 import SERVICES from './Services/Services';
 import Projects from './Projects/Projects';
 import ABOUT from './About/About';

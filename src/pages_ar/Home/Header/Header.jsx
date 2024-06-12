@@ -67,7 +67,7 @@ function Header() {
             <SwiperSlide key={index}>
               <div className="slide-content">
                 <div className='overlay'></div>
-                <img className="Header-pic" src={slide.img} alt={`Header Image ${index + 1}`} />
+                <img className="Header-pic" src={slide.img} alt={`Header  ${index + 1}`} />
                 <p className="slide-text slide-in">{slide.text}</p>
               </div>
             </SwiperSlide>

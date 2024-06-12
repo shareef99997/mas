@@ -30,10 +30,10 @@ function NavBar({ currentPage }) {
             <a href="mailto:info@example.com">info@example.com</a>
           </div>
           <div className="social-media">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="/"><i className="fab fa-facebook-f"></i></a>
+            <a href="/"><i className="fab fa-twitter"></i></a>
+            <a href="/"><i className="fab fa-instagram"></i></a>
+            <a href="/"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
         <div className="left-side">
@@ -79,7 +79,7 @@ function NavBar({ currentPage }) {
           </li>
           
           <a className='nav-btn' href="/contact-us">
-            <button className="Contact-btn">  سجل إهتمامك الآن </button>
+            <button className="Contact-btn navbtn">  سجل إهتمامك الآن </button>
           </a>
           
         </ul>

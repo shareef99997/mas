@@ -195,6 +195,10 @@
     display: block;
   }
 
+  .navbtn{
+    padding: 10px 20px;
+  }
+
   .Contact-btn {
     font-size: 10px;
     margin-top: 8px;
@@ -253,7 +257,7 @@
   .top-bar {
     flex-direction: row; /* Maintain row layout */
     justify-content: space-between; /* Space items evenly */
-    padding: 2px; /* Reduce padding */
+    padding: 8px 2px; /* Reduce padding */
   }
 
   .right-side, .left-side {
