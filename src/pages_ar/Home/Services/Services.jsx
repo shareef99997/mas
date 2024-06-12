@@ -6,7 +6,8 @@ import './Services.css';
 function Services() {
 
   return (
-    <div className="Services" id="Services" >
+    <div className="Home-Services" id="Home-Services" >
+      <h1>Services</h1>
     </div>
   );
 }

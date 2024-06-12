@@ -6,8 +6,8 @@ function About() {
 
 
   return (
-    <div className="About" id="About" >
-      <div className='About-Body'>
+    <div className="Home-About" id="Home-About" >
+      <div className='About-Body'><h1>About us</h1>
       </div>
     </div>
   );

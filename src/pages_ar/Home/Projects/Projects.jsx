@@ -3,7 +3,9 @@ import './Projects.css';
 function Projects() {
 
   return (
-    <div className="Projects" id="Projects">
+    <div className="Home-Projects" id="Home-Projects">
+      <h1>Projects</h1>
+      
     </div>
   );
 }

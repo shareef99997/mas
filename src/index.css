@@ -6,8 +6,8 @@
   --button-color:#977437;
   --background-color:#0a2919;
   --text-color:#ab823b;
-  --button-color:#977437;
-  --main-gradient:linear-gradient(90deg, #00120a 0%, #021d10 50%, #00130a);
+  --button-color:linear-gradient(90deg, #785e32 0%, #8c6e3a 50%, #785e32);
+  --main-gradient:linear-gradient(90deg, #000f08 0%, #001008 50%, #000f08);
 }
 
 
@@ -55,7 +55,7 @@ h3{
 
 p{
   font-size: 15px;
-  ccolor: #efefef;
+  color: #efefef;
 }
 
 a{
@@ -63,18 +63,36 @@ a{
   color: #efefef;
 }
 
-button{
-  padding: 10px 20px ;
+button {
   font-size:15px;
-  cursor: pointer;
-  background-color: var(--button-color);
+  background: var(--button-color);
+  font-family: "Tajawal", sans-serif;
+  position: relative;
+  color: white;
+  padding: 15px 55px;
+  overflow: hidden;
   border: none;
-  color: #fffcff;
+  cursor: pointer;
+  z-index: 1;
 }
 
-button:hover{
-  background-color: #604c2b;
+button::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: 140%;
+  width: 100%;
+  height: 200%;
+  background: #dbae5f66;
+  z-index: -1;
+  transition: transform 0.5s ease;
+  transform: skewX(45deg);
 }
+
+button:hover::before {
+  transform: translateX(-280%) skewX(45deg);
+}
+
 
 @media (max-width: 920px) {
   

@@ -12,8 +12,7 @@ import CONTACT from '../Home/Contact/Contact';
 function Home() {
   return (
     <div className="Home" lang="ar">
-      <NAVBAR currentPage="home" />
-      <HEADER />
+      
       <HEADER />
       <ABOUT />
       <SERVICES />

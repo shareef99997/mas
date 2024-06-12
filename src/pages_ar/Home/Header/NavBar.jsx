@@ -74,11 +74,19 @@ function NavBar({ currentPage }) {
           <li className={`${currentPage === 'join-us' ? 'active' : ''}`}>
             <a href="/join-us"> التوظيف </a>
           </li>
+          <li className={`${currentPage === 'contact-us' ? 'active' : ''}`}>
+            <a href="/contact-us"> تواصل معنا  </a>
+          </li>
+          
+          <a className='nav-btn' href="/contact-us">
+            <button className="Contact-btn">  سجل إهتمامك الآن </button>
+          </a>
+          
         </ul>
 
         <div className="contact-button">
           <a href="/contact-us">
-            <button className="Contact-btn">تواصل معنا</button>
+            <button className="Contact-btn">  سجل إهتمامك الآن </button>
           </a>
         </div>
 

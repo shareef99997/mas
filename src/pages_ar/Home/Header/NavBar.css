@@ -4,9 +4,8 @@
 
 .main-nav {
   width: 100%;
-  background: var(--main-gradient);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.623) 0%, rgba(0, 0, 0, 0.399) 50%, rgba(0, 0, 0, 0));
   z-index: 1000;
-  box-shadow: 0 1px 10px;
 }
 
 .top-bar {
@@ -16,7 +15,7 @@
   padding: 0px 50px;
   background: var(--main-gradient);
   border-bottom: 2px solid var(--second-color);
-  color: white;
+  color: rgb(214, 214, 214);
 }
 
 .right-side, .left-side {
@@ -26,6 +25,7 @@
 
 .right-side .phone-number, .right-side .email, .left-side .lang, .left-side .date-time {
   margin-right: 15px;
+  
 }
 
 .right-side :hover, .right-side a:hover ,.left-side a:hover {
@@ -33,7 +33,7 @@
 }
 
 .social-media a, .phone-number a, .email a, .lang a {
-  color: white;
+  
   text-decoration: none;
 }
 
@@ -49,6 +49,10 @@
 .lang button {
   background: transparent;
   color: white;
+}
+
+.lang button::before {
+  display: none;
 }
 
 .nav-content {
@@ -67,6 +71,7 @@
   margin: 0 auto;
   transition: ease 0.3s;
   align-items: center;
+  /* background: #00150bbb; */
 }
 
 .nav-menu li {
@@ -82,7 +87,7 @@
   cursor: pointer;
 }
 
-.nav-menu li:not(.cbl)::after {
+.nav-menu li:not(.nav-btn)::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -115,6 +120,10 @@
   color: var(--text-color);
 }
 
+.nav-btn{
+  display: none;
+}
+
 .contact-button .Contact-btn {
   background: var(--second-color);
   padding: 10px 20px;
@@ -123,15 +132,13 @@
   cursor: pointer;
 }
 
-.contact-button .Contact-btn:hover {
-  background: #604c2b;
-}
 
 .logo {
   text-align: center;
   transition: ease-in-out 0.3s;
-  padding-top: 10px;
+  padding: 10px;
   width: 80px;
+  
 }
 
 .logo:hover {
@@ -180,12 +187,17 @@
   }
 
   .contact-button {
-    order: 3;
+    display: none;
 
   }
+ 
+  .nav-btn{
+    display: block;
+  }
 
-  .contact-button button {
-    font-size: 12px;
+  .Contact-btn {
+    font-size: 10px;
+    margin-top: 8px;
   }
 
   /* Styles for the burger menu icon */
@@ -225,6 +237,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: none;
   }
 
   .logo img {
@@ -267,6 +280,7 @@
 
   .lang button {
     font-size: 10px; /* Adjust font size */
+    padding: 10px;
   }
 }
 
@@ -288,7 +302,7 @@
     font-size: 9px; /* Adjust font size */
   }
   .contact-button button {
-    font-size:10px;
+    font-size:9px;
   }
 }
 
