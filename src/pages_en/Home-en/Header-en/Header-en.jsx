@@ -69,7 +69,7 @@ function Header_en() {
               <div className="slide-content">
                 <div className='overlay'></div>
                 <img className="Header-pic" src={slide.img} alt={`Header  ${index + 1}`} />
-                <p className="slide-text slide-in">{slide.text}</p>
+                <p className="slide-text slide-in"  id='slide-text'>{slide.text}</p>
               </div>
             </SwiperSlide>
           ))}
@@ -77,7 +77,7 @@ function Header_en() {
       </div>
 
       <div className='Header-Content'>
-        <h1> Morning Real Estate System </h1>
+        <h1> Al Sabah Real Estate System </h1>
         <a href="#Home-About">
           <button className="Header-Button"> Get Started Now </button>
         </a>

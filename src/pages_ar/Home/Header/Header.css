@@ -63,6 +63,16 @@
   100% { opacity: 1; transform: translateX(0); }
 }
 
+@keyframes fadeInFromTop {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInFromBottom {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
 .slide-text {
   position: absolute;
   bottom: 10%;
@@ -71,11 +81,15 @@
   z-index: 2;
   color: white;
   font-size: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.97);
+  background-color: rgba(0, 0, 0, 0.764);
   padding: 10px 20px;
   opacity: 0; /* Initial state */
   transform: translateX(-100%); /* Initial state */
+  border-left: solid 2px rgb(103, 103, 103);
+  border-top: solid 2px rgb(103, 103, 103);
+  border-bottom: solid 2px rgb(103, 103, 103);
 }
+
 
 .slide-text.slide-in {
   animation: slideInRight 0.8s ease-in-out forwards;
@@ -98,10 +112,21 @@
 .Header-Content h1 {
   font-size: 3rem; /* Responsive font size */
   margin: 0;
-  color: white;
+  font-weight: 400;
+  color: var(--text-color);
   transition: 1s ease-in-out;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Start position for animation */
+  animation: fadeInFromTop 0.5s ease-in-out forwards;
+  animation-delay: 0.5s; /* Delay before animation starts */
 }
 
+.Header-Content .Header-Button {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start position for animation */
+  animation: fadeInFromBottom 0.5s ease-in-out forwards;
+  animation-delay: 0.8s; /* Delay before animation starts */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -118,6 +143,10 @@
   .slide-text {
     font-size: 1.0rem;
     bottom: 20%;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-left:none ;
   }
 
   .Header-Content h1 {

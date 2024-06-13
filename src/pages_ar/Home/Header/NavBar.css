@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 20px;
   background: var(--main-gradient);
   border-bottom: 2px solid var(--second-color);
   color: rgb(214, 214, 214);
@@ -49,6 +49,7 @@
 .lang button {
   background: transparent;
   color: white;
+  padding: 10px 4px;
 }
 
 .lang button::before {
@@ -164,7 +165,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(1, 33, 13, 0.799);
+    background-color: rgba(0, 17, 7, 0.799);
     width: 40%; /* Adjusted to cover more screen space */
     height: 100vh; /* Full height of the viewport */
     justify-content: center;
