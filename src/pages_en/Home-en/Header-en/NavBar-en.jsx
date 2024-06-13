@@ -75,13 +75,13 @@ function NavBar_en({ currentPage }) {
             <a href="/contact-us">Contact Us</a>
           </li>
           <a className='nav-btn' href="/contact-us">
-            <button className="Contact-btn navbtn">Register Your Interest Now</button>
+            <button className="Contact-btn navbtn">Register Your Interest</button>
           </a>
         </ul>
 
         <div className="contact-button">
           <a href="/contact-us">
-            <button className="Contact-btn ">Register Your Interest Now</button>
+            <button className="Contact-btn ">Register Your Interest</button>
           </a>
         </div>
 

@@ -3,9 +3,8 @@
 :root{
   --main-color:#002412;
   --second-color:#8c6e3a;
-  --button-color:#977437;
   --background-color:#0a2919;
-  --text-color:#ab823b;
+  --text-color:#8c6e3a;
   --button-color:linear-gradient(90deg, #785e32 0%, #8c6e3a 50%, #785e32);
   --main-gradient:linear-gradient(90deg, #000f08 0%, #001008 50%, #000f08);
 }
@@ -46,6 +45,7 @@ h1{
 h2{
   font-size: 35px;
   color: #efefef;
+  font-weight: 400;
 }
 
 h3{
@@ -56,6 +56,7 @@ h3{
 p{
   font-size: 15px;
   color: #efefef;
+  font-weight: 300;
 }
 
 a{
