@@ -125,7 +125,7 @@
   display: none;
 }
 
-.contact-button .Contact-btn {
+.interest-button .Interest-btn {
   background: var(--second-color);
   padding: 10px 20px;
   border: none;
@@ -187,7 +187,7 @@
     transform: translateX(0); /* Slide in from the right */
   }
 
-  .contact-button {
+  .interest-button {
     display: none;
 
   }
@@ -200,7 +200,7 @@
     padding: 10px 20px;
   }
 
-  .Contact-btn {
+  .Interest-btn {
     font-size: 10px;
     margin-top: 8px;
   }
@@ -306,7 +306,7 @@
   .lang button {
     font-size: 9px; /* Adjust font size */
   }
-  .contact-button button {
+  .interest-button button {
     font-size:9px;
   }
 }

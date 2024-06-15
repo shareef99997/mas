@@ -3,7 +3,7 @@ import './App.css';
 import Home from './pages_ar/Home/Home.jsx';
 import AboutUs from './pages_ar/About-us/About-us'; 
 import Services from './pages_ar/Services/Services';
-import Projects from './pages_ar/Projects/Projects';
+import Work from './pages_ar/Work/Work';
 import JoinUs from './pages_ar/Join-us/Join-us';
 import ContactUs from './pages_ar/Contact-us/Contact-us';
 
@@ -12,7 +12,9 @@ import ABOUTUS_EN from './pages_en/About-us-en/About-us-en.jsx';
 import SERVICES_EN from './pages_en/Services-en/Services-en.jsx';
 import JOINUS_EN from './pages_en/Join-us-en/Join-us-en.jsx';
 import CONTACTUS_EN from './pages_en/Contact-us-en/Contact-us-en.jsx';
+
 import React, { useState, useEffect } from 'react';
+import WORK_EN from './pages_en/Home-en/Work-en/Work-en.jsx';
 
 
 function App() {
@@ -47,8 +49,8 @@ function App() {
         return <AboutUs />;
       case '/services':
         return <Services />;
-      case '/Projects':
-        return <Projects />;
+      case '/Work':
+        return <Work />;
       case '/join-us':
         return <JoinUs />;
       case '/contact-us':
@@ -61,6 +63,8 @@ function App() {
         return <ABOUTUS_EN />;
       case '/en/services':
         return <SERVICES_EN />;
+      case '/en/Work':
+        return <WORK_EN />;
       case '/en/join-us':
         return <JOINUS_EN />;
       case '/en/contact-us':

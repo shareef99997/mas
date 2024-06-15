@@ -65,8 +65,8 @@ function NavBar_en({ currentPage }) {
           <li className={`${currentPage === 'services' ? 'active' : ''}`}>
             <a href="/services">Services</a>
           </li>
-          <li className={`${currentPage === 'Projects' ? 'active' : ''}`}>
-            <a href="/Projects">Properties</a>
+          <li className={`${currentPage === 'Work' ? 'active' : ''}`}>
+            <a href="/Work">Properties</a>
           </li>
           <li className={`${currentPage === 'join-us' ? 'active' : ''}`}>
             <a href="/join-us">Join Us</a>
@@ -75,13 +75,13 @@ function NavBar_en({ currentPage }) {
             <a href="/contact-us">Contact Us</a>
           </li>
           <a className='nav-btn' href="/contact-us">
-            <button className="Contact-btn navbtn">Register Your Interest</button>
+            <button className="Interest-btn navbtn">Register Your Interest</button>
           </a>
         </ul>
 
-        <div className="contact-button">
-          <a href="/contact-us">
-            <button className="Contact-btn ">Register Your Interest</button>
+        <div className="interest-button">
+          <a href="#Home-INTEREST-en">
+            <button className="Interest-btn ">Register Your Interest</button>
           </a>
         </div>
 

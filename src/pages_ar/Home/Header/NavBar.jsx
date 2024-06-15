@@ -68,8 +68,8 @@ function NavBar({ currentPage }) {
           <li className={`${currentPage === 'services' ? 'active' : ''}`}>
             <a href="/services">خدماتنا</a>
           </li>
-          <li className={`${currentPage === 'Projects' ? 'active' : ''}`}>
-            <a href="/Projects">العقارات</a>
+          <li className={`${currentPage === 'Work' ? 'active' : ''}`}>
+            <a href="/Work">الأعمال</a>
           </li>
           <li className={`${currentPage === 'join-us' ? 'active' : ''}`}>
             <a href="/join-us"> التوظيف </a>
@@ -78,15 +78,15 @@ function NavBar({ currentPage }) {
             <a href="/contact-us"> تواصل معنا  </a>
           </li>
           
-          <a className='nav-btn' href="/contact-us">
-            <button className="Contact-btn navbtn">  سجل إهتمامك الآن </button>
+          <a className='nav-btn' href="#Home-INTEREST">
+            <button className="Interest-btn navbtn">  سجل إهتمامك الآن </button>
           </a>
           
         </ul>
 
-        <div className="contact-button">
-          <a href="/contact-us">
-            <button className="Contact-btn">  سجل إهتمامك الآن </button>
+        <div className="interest-button">
+          <a href="#Home-INTEREST">
+            <button className="Interest-btn">  سجل إهتمامك الآن </button>
           </a>
         </div>
 

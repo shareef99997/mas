@@ -2,8 +2,9 @@
 import './Home.css';
 import HEADER from './Header/Header';
 import SERVICES from './Services/Services';
-import Projects from './Projects/Projects';
+import WORK from './Work/Work';
 import ABOUT from './About/About';
+import PARTNERS from './Partners/Partners';
 import FOOTER from '../Home/Footer/Footer';
 import INTEREST from './Interest/Interest';
 
@@ -14,8 +15,9 @@ function Home() {
       
       <HEADER />
       <ABOUT />
+      <PARTNERS />
       <SERVICES />
-      <Projects />
+      <WORK />
       <INTEREST />
       <FOOTER />
     </div>
