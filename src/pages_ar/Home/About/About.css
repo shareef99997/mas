@@ -4,7 +4,7 @@
   margin: 0;
   /* height: 100vh; */
   overflow: hidden;
-  background: rgb(26, 26, 26);
+  background: var(--main-background-color);
   transition: 1s ease;
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@
   
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.684);
+  background: rgba(0, 0, 0, 0.508);
   z-index: 0;
 }
 
@@ -113,13 +113,13 @@
   margin-top: 20px;
   padding: 20px;
   text-align: center;
-  background-color: rgba(26, 26, 26, 0.829);
-  border-radius: 10px;
+  background: var(--background-color-transparent);
+  border-radius: 10px 0 10px 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-bottom: 20px;
   transition: opacity 0.3s ease;
   margin-bottom: 90px;
-  min-height: 250px;
+  min-height: 317px;
   align-content: center;
   z-index: 1;
 }
@@ -175,9 +175,7 @@
 }
 
 /*/////////////////// Media Queries ///////////////////*/
-@media (max-width: 868px) {
 
-}
 @media (max-width: 868px) {
   .about-top-section {
     flex-direction: column;
@@ -247,4 +245,68 @@
     font-size: 0.85rem;
   }
 
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInFromLeft 1s forwards;
+}
+
+.fade-in-right {
+  animation: fadeInFromRight 1s forwards;
+}
+
+.fade-in-top {
+  animation: fadeInFromTop 1s forwards;
+}
+
+.fade-in-bottom {
+  animation: fadeInFromBottom 1s forwards;
+}
+
+.hidden {
+  opacity: 0;
 }

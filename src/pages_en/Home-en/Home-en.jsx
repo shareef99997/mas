@@ -5,7 +5,7 @@ import SERVICES_EN from './Services-en/Services-en';
 import PROJECTS_EN from './Projects-en/Projects-en';
 import ABOUT_EN from './About-en/About-en';
 import FOOTER_EN from '../Home-en/Footer-en/Footer-en';
-import CONTACT_EN from '../Home-en/Contact-en/Contact-en';
+import INTEREST_EN from '../Home-en/Interest-en/Interest-en';
 
 
 function Home() {
@@ -15,7 +15,7 @@ function Home() {
       <ABOUT_EN />
       <SERVICES_EN />
       <PROJECTS_EN />
-      <CONTACT_EN />
+      <INTEREST_EN />
       <FOOTER_EN />
     </div>
   );

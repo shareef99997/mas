@@ -2,7 +2,7 @@
 import NavBar from '../Home/Header/NavBar';
 import './Services.css'
 import Footer from '../../pages_ar/Home/Footer/Footer';
-import Contact from '../../pages_ar/Home/Contact/Contact';
+import INTEREST from '../../pages_ar/Home/Interest/Interest';
 
 function Services() {  
 
@@ -13,7 +13,7 @@ function Services() {
         <NavBar currentPage="services"/>
         </div>
 
-        <Contact />
+        <INTEREST />
         <Footer />
     </div>
   );

@@ -4,6 +4,6 @@
   margin: 0;
   height: 82vh;
   overflow: hidden; 
-  background-color: rgba(0, 0, 0, 0.174);
+  background: var(--background-color);
   transition: 1s ease;
 }

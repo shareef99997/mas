@@ -2,7 +2,7 @@
 import NavBar from '../Home/Header/NavBar';
 import './Projects.css';
 import Footer from '../../pages_ar/Home/Footer/Footer';
-import Contact from '../../pages_ar/Home/Contact/Contact';
+import INTEREST from '../../pages_ar/Home/Interest/Interest';
 
 function Projects() {
   return (
@@ -11,7 +11,7 @@ function Projects() {
         <NavBar currentPage={'Projects'} />
       </header>
 
-      <Contact />
+      <INTEREST />
       <Footer />
     </div>
   );

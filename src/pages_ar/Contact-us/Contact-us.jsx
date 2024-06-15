@@ -2,7 +2,7 @@
 import './Contact-us.css';
 import NavBar from "../Home/Header/NavBar";
 import Footer from '../../pages_ar/Home/Footer/Footer';
-import Contact from '../../pages_ar/Home/Contact/Contact';
+import INTEREST from '../../pages_ar/Home/Interest/Interest';
 
 
 
@@ -132,7 +132,7 @@ function Contact_us() {
         </div>
       </div> */}
       
-      <Contact />
+      <INTEREST />
       <Footer />
     </div>
   );

@@ -5,7 +5,7 @@ import SERVICES from './Services/Services';
 import Projects from './Projects/Projects';
 import ABOUT from './About/About';
 import FOOTER from '../Home/Footer/Footer';
-import CONTACT from '../Home/Contact/Contact';
+import INTEREST from './Interest/Interest';
 
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
       <ABOUT />
       <SERVICES />
       <Projects />
-      <CONTACT />
+      <INTEREST />
       <FOOTER />
     </div>
   );

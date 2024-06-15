@@ -2,7 +2,7 @@
 import './Contact-us.css';
 import NavBar from "../Home-en/Header-en/NavBar-en";
 import Footer from '../Home-en/Footer-en/Footer-en';
-import Contact from '../Home-en/Contact-en/Contact-en';
+import INTEREST_EN from '../Home-en/Interest-en/Interest-en';
 
 
 function Contact_us_en() {
@@ -14,7 +14,7 @@ function Contact_us_en() {
       <div className="Contact-us-Header Page-Header-en">
         <NavBar currentPage="contact-us" />
       </div>
-      <Contact />
+      <INTEREST_EN />
       <Footer />
     </div>
   );

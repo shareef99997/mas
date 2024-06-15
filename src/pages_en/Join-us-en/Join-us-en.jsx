@@ -2,7 +2,7 @@
 import './Join-us.css';
 import NavBar from "../Home-en/Header-en/NavBar-en";
 import Footer from '../Home-en/Footer-en/Footer-en';
-import Contact from '../Home-en/Contact-en/Contact-en';
+import INTEREST_EN from '../Home-en/Interest-en/Interest-en';
 
 
 function Join_us_en() {
@@ -13,7 +13,7 @@ function Join_us_en() {
         <NavBar currentPage="join-us" />
       </div>
 
-      <Contact />
+      <INTEREST_EN />
       <Footer />
     </div>
   );

@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
-  background: var(--main-gradient);
+  background: var(--main-background-color);
   border-bottom: 2px solid var(--second-color);
   color: rgb(214, 214, 214);
 }

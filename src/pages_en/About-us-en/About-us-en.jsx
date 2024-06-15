@@ -1,7 +1,7 @@
 
 import NavBar from "../Home-en/Header-en/NavBar-en";
 import Footer from '../Home-en/Footer-en/Footer-en';
-import Contact from '../Home-en/Contact-en/Contact-en';
+import INTEREST_EN from '../Home-en/Interest-en/Interest-en';
 import './About-us.css';
 import '../Pages.css';
 
@@ -13,7 +13,7 @@ function About_us_en() {
         <NavBar currentPage="about-us"/>
       </div>
 
-      <Contact />
+      <INTEREST_EN />
       <Footer />
     </div>
   );
