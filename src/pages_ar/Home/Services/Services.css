@@ -4,6 +4,6 @@
   margin: 0;
   height: 82vh;
   overflow: hidden; 
-  background: var(--background-color);
+  background: var(--main-background-color);
   transition: 1s ease;
 }

@@ -66,7 +66,7 @@
 }
 
 .About-title-description h2{
-  color: #8c6e3a;
+  color: var(--second-color);
 }
 
 .button-container {
@@ -116,7 +116,6 @@
   background: var(--background-color-transparent);
   border-radius: 10px 0 10px 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
   transition: opacity 0.3s ease;
   margin-bottom: 90px;
   min-height: 317px;
@@ -152,11 +151,13 @@
   border: none;
   outline: none;
   transition: 0.5s ease;
+  box-shadow: none;
 }
 
 .selector-section button.active {
-  --button-color:linear-gradient(90deg, #4d3a1a 0%, #6b532a 50%, #4d3a1a);
+  --button-color:linear-gradient(90deg, #695430 0%, #6b532a 50%, #695430);
   transition: 0.5s ease;
+  box-shadow: 5px  0px rgb(80, 70, 36);
 }
 
 

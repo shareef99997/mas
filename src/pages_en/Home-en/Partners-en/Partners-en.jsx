@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CountUp from 'react-countup';
-import './Partners.css';
-import '../sections.css';
+import './Partners-en.css';
+import '../sections-en.css';
 
-function Partners() {
+
+function Partners_en() {
   const titleRef = useRef(null);
   const sectionRef = useRef(null);
   const numbersRef = useRef(null);
@@ -64,7 +65,7 @@ function Partners() {
 
   return (
     <div className="Home-Partners" id="Home-Partners">
-      <h2 className="partners-section-title section-title" ref={titleRef}>شركاء النجاح</h2>
+      <h2 className="partners-section-title section-title-en" ref={titleRef}>  Success Partners  </h2>
       <div className='Partners-Section'>
         <div className='carousel'>
           <div className="logos" ref={sectionRef}>
@@ -82,7 +83,7 @@ function Partners() {
         </div>
       </div>
       <div className='Numbers-section' ref={numbersRef}>
-        {['الرقم الأول', 'الرقم الثاني', 'الثالث الأول'].map((title, index) => (
+        {[' First Number ', ' Second Number ', 'Third Number '].map((title, index) => (
           <div className='number-square' key={index}>
             <h3 className='container-title'>{title}</h3>
             <div className='number-container'>
@@ -102,4 +103,4 @@ function Partners() {
   );
 }
 
-export default Partners;
+export default Partners_en;

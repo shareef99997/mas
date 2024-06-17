@@ -29,7 +29,7 @@
 }
 
 .right-side :hover, .right-side a:hover ,.left-side a:hover {
-  color: var(--text-color);
+  color: var(--second-color);
 }
 
 .social-media a, .phone-number a, .email a, .lang a {
@@ -50,6 +50,7 @@
   background: transparent;
   color: white;
   padding: 10px 4px;
+  box-shadow: none;
 }
 
 .lang button::before {
@@ -108,7 +109,7 @@
 
 .nav-menu li:hover a {
   transition: ease 0.3s;
-  color: var(--text-color);
+  color: var(--second-color);
 }
 
 .nav-menu li.active::after {
@@ -118,7 +119,7 @@
 
 .nav-menu li.active a {
   transition: ease 0.3s;
-  color: var(--text-color);
+  color: var(--second-color);
 }
 
 .nav-btn{
@@ -126,7 +127,7 @@
 }
 
 .interest-button .Interest-btn {
-  background: var(--second-color);
+  
   padding: 10px 20px;
   border: none;
   color: white;
@@ -153,7 +154,7 @@
 /* Add these styles at the end of your CSS */
 
 /* Tablet and smaller screens */
-@media (max-width: 920px) {
+@media (max-width: 1100px) {
   .nav-content {
     padding: 0 30px;
     
@@ -258,7 +259,7 @@
   .top-bar {
     flex-direction: row; /* Maintain row layout */
     justify-content: space-between; /* Space items evenly */
-    padding: 8px 2px; /* Reduce padding */
+    padding: 8px 10px; /* Reduce padding */
   }
 
   .right-side, .left-side {
@@ -270,6 +271,9 @@
     display: none;
   }
 
+  
+}
+@media (max-width: 900px) {
   .right-side .phone-number,
   .right-side .email,
   .left-side .lang,
@@ -286,6 +290,11 @@
   .lang button {
     font-size: 10px; /* Adjust font size */
     padding: 10px;
+  }
+  .top-bar {
+    flex-direction: row; /* Maintain row layout */
+    justify-content: space-between; /* Space items evenly */
+    padding: 8px 7px; /* Reduce padding */
   }
 }
 

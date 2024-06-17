@@ -2,12 +2,11 @@
 
 :root{
   --main-color:#002412;
-  --second-color:#8c6e3a;
   --background-color:#f0f0f0;
-  --main-background-color:#191e1b;
-  --background-color-transparent:#191e1bec;
-  --text-color:#8c6e3a;
-  --button-color:linear-gradient(90deg, #785e32 0%, #8c6e3a 50%, #785e32);
+  --main-background-color:#1e1e1e;
+  --background-color-transparent:#1e1e1eec;
+  --second-color:#7e663d;
+  --button-color:#7e663d;
   --main-gradient:linear-gradient(90deg, #000f08 0%, #001008 50%, #000f08);
 }
 
@@ -47,13 +46,14 @@ h1{
 
 h2{
   font-size: 35px;
-  color: #efefef;
+  color: #000000;
   font-weight: 400;
 }
 
 h3{
   font-size: 25px;
-  color: #efefef;
+  color: #000000;
+  font-weight: 500;
 }
 
 p{
@@ -78,6 +78,7 @@ button {
   border: none;
   cursor: pointer;
   z-index: 1;
+  box-shadow: 5px 5px  rgb(73, 64, 36);
 }
 
 button::before {
@@ -98,6 +99,3 @@ button:hover::before {
 }
 
 
-@media (max-width: 920px) {
-  
-}

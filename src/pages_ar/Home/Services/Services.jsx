@@ -7,7 +7,7 @@ function Services() {
 
   return (
     <div className="Home-Services" id="Home-Services" >
-      <h1>Services</h1>
+      <h2 className='section-title'> ماذا نقدم لكم ؟ </h2>
     </div>
   );
 }

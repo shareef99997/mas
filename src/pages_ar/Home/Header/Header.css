@@ -113,7 +113,7 @@
   font-size: 3rem; /* Responsive font size */
   margin: 0;
   font-weight: 400;
-  color: var(--text-color);
+  color: var(--second-color);
   transition: 1s ease-in-out;
   opacity: 0; /* Initially hidden */
   transform: translateY(-20px); /* Start position for animation */
