@@ -163,7 +163,7 @@
   .nav-menu {
     z-index: 1000;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     background-color: rgba(0, 17, 7, 0.799);
