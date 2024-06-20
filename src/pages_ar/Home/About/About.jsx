@@ -34,13 +34,13 @@ function About() {
   
     if (firstSection) {
       firstSection.classList.add('hidden');
-      firstSection.dataset.animation = 'fade-in-right';
+      firstSection.dataset.animation = 'fade-in-left';
       observer.observe(firstSection);
     }
   
     if (secondSection) {
       secondSection.classList.add('hidden');
-      secondSection.dataset.animation = 'fade-in-left';
+      secondSection.dataset.animation = 'fade-in-right';
       observer.observe(secondSection);
     }
 
@@ -84,14 +84,14 @@ function About() {
       const secondSection = secondSectionRef.current;
 
       if (firstSection) {
-        firstSection.classList.remove('fade-in-right');
+        firstSection.classList.remove('fade-in-left');
         void firstSection.offsetWidth; // Trigger reflow
-        firstSection.classList.add('hidden', 'fade-in-right');
+        firstSection.classList.add('hidden', 'fade-in-left');
       }
       if (secondSection) {
-        secondSection.classList.remove('fade-in-left');
+        secondSection.classList.remove('fade-in-right');
         void secondSection.offsetWidth; // Trigger reflow
-        secondSection.classList.add('hidden', 'fade-in-left');
+        secondSection.classList.add('hidden', 'fade-in-right');
       }
 
       setTimeout(() => {
@@ -150,7 +150,7 @@ function About() {
               </div>
             </section>
             <section className="left-section" ref={secondSectionRef}>
-              <p>وجود وسيط عقاري محترف بين البائع والمشتري يساعد بشكل كبير في إنجاح الصفقة العقارية. وما يميزنا في شركة منظومة الصباح العقارية هو جودة واحترافية منتج التسويق العقاري، حيث إننا نتميز بالتسويق غير الحصري بالتعاون مع شركات تسويق عقارية ومئات المكاتب بإدارة محترفة تسهل سرعة إفراغ وكسب رضا المطور. ولدينا القدرة للوصول لأكبر شريحة من العملاء المهتمين بالمجال العقاري.</p>
+              <p>  وجود وسيط عقاري محترف بين البائع والمشتري يساعد بشكل كبير في إنجاح الصفقة العقارية. وما يميزنا في شركة منظومة الصباح العقارية هو جودة واحترافية منتج التسويق العقاري، حيث إننا نتميز بالتسويق غير الحصري بالتعاون مع شركات تسويق عقارية ومئات المكاتب بإدارة محترفة تسهل سرعة إفراغ وكسب رضا المطور. ولدينا القدرة للوصول لأكبر شريحة من العملاء المهتمين بالمجال العقاري.</p>
             </section>
           </div>
         );

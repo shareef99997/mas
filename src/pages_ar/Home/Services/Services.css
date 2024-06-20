@@ -2,8 +2,141 @@
   position: relative;
   padding: 0;
   margin: 0;
-  height: 82vh;
   overflow: hidden; 
   background: var(--main-background-color);
   transition: 1s ease;
+}
+
+.Home-Services-body{
+  padding: 40px;
+  justify-content: space-between;
+}
+
+.Home-Services-Section{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.Service-Box{
+  border: 1px solid var(--second-color);
+  text-align: center;
+  background: #ffffff0a;
+  box-shadow: 5px 5px  rgb(73, 64, 36);
+}
+
+.Service-Title{
+  height: 200px;
+  position: relative;
+}
+
+.Service-Title-1{
+  background:url("../../../Assets/Images/blog.jpg");
+  -webkit-background-size:cover ;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.Service-Title-2{
+  background:url("../../../Assets/Images/contact.jpg");
+  -webkit-background-size:cover ;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.Service-Title-3{
+  background:url("../../../Assets/Images/join-us.jpg");
+  -webkit-background-size:cover ;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.Service-Title-4{
+  background:url("../../../Assets/Images/about-us.jpg");
+  -webkit-background-size:cover ;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.Service-Title h2{
+  color: white;
+  background: var(--button-color);
+  font-size: 17px;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  position: absolute;
+  left: 7%;
+  width: 80%;
+  margin: 0;
+  bottom: -25px;
+  letter-spacing: 2px;
+  box-shadow: 5px 5px  rgb(73, 64, 36);
+}
+
+
+.Service-Box:hover .Service-Title h2 {
+  background: #ffffff;
+  color: var(--second-color);
+  box-shadow: 5px 5px  rgb(105, 105, 104);
+  transition: 0.5s ease;
+}
+
+.Service-Box:hover .Service-Title {
+  transform: scale(0.97);
+}
+
+.Service-Description{
+  padding: 50px 30px 20px;
+}
+
+.Service-Description a{
+  margin-top: 10px;
+  color: var(--second-color);
+  font-weight: 600;
+}
+
+.Service-Description a:hover{
+  color: white;
+  
+}
+
+.Service-Description a:hover span{
+  color: white;
+  margin-right: 5px;
+}
+
+@media (max-width: 1268px) {
+  .Home-Services-Section{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Service-Description p{
+    font-size: 12px;
+  }
+  .Service-Description a{
+    font-size: 12px;
+  }
+}
+@media (max-width: 758px) {
+  .Home-Services-Section{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Service-Title h2{
+    font-size: 13px;
+  }
+
+  .Service-Description p{
+    font-size: 10px;
+  }
+
+  .Service-Description a{
+    font-size: 10px;
+  }
+
 }
