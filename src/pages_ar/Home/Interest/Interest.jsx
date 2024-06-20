@@ -1,8 +1,57 @@
 import './Interest.css';
-import React, { useState } from 'react';
+import React, { useState,useRef,useEffect } from 'react';
 import emailjs from 'emailjs-com';
 
 function INTEREST() {
+
+  const titleRef = useRef(null);
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
+
+ useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(entry.target.dataset.animation);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const title = titleRef.current;
+    const section1 = section1Ref.current;
+    const section2 = section2Ref.current;
+
+
+    if (title) {
+      title.classList.add('hidden');
+      title.dataset.animation = 'fade-in-left';
+      observer.observe(title);
+    }
+
+    if (section1) {
+      section1.classList.add('hidden');
+      section1.dataset.animation = 'fade-in-left';
+      observer.observe(section1);
+    }
+
+    if (section2) {
+      section2.classList.add('hidden');
+      section2.dataset.animation = 'fade-in-right';
+      observer.observe(section2);
+    }
+
+
+
+    return () => {
+      if (title) observer.unobserve(title);
+      if (section1) observer.unobserve(section1);
+      if (section2) observer.unobserve(section2);
+    };
+  }, []);
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -57,9 +106,9 @@ const handleSubmit = (e) => {
 
   return (
     <div className="Home-Interest" id="Home-Interest" >
-      <h2 className="Interest-section-title section-title"> سجل اهتمامك </h2>
+      <h2 className="Interest-section-title section-title" ref={titleRef}> سجل اهتمامك </h2>
       <div className='Interest-body'>
-        <div className='Interest-info-column'>
+        <div className='Interest-info-column' ref={section1Ref}>
           <h2> إطلب او اعرض وحدك الان   </h2>
           <p> مستويات غير مسبوقة من الجودة في الخدمة </p>
           <div class="line-container">
@@ -72,7 +121,7 @@ const handleSubmit = (e) => {
           
         </div>
 
-        <div className='Interest-form-column'>
+        <div className='Interest-form-column' ref={section2Ref}>
           <form className="Interest-form" onSubmit={handleSubmit}>
             
             <div className="form-group">

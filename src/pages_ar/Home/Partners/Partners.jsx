@@ -41,13 +41,13 @@ function Partners() {
 
     if (title) {
       title.classList.add('hidden');
-      title.dataset.animation = 'fade-in-right';
+      title.dataset.animation = 'fade-in-left';
       observer.observe(title);
     }
 
     if (section) {
       section.classList.add('hidden');
-      section.dataset.animation = 'fade-in-left';
+      section.dataset.animation = 'fade-in-right';
       observer.observe(section);
     }
 
