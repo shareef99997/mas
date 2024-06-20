@@ -34,7 +34,7 @@ function Services() {
 
     if (section1) {
       section1.classList.add('hidden');
-      section1.dataset.animation = 'fade-in-left';
+      section1.dataset.animation = 'fade-in-up';
       observer.observe(section1);
     }
 
@@ -58,7 +58,7 @@ function Services() {
       <h2 className='section-title' ref={titleRef}> ماذا نقدم لكم ؟ </h2>
       <body className='Home-Services-body'>
 
-        <div className='Home-Services-Section'>
+        <div className='Home-Services-Section' ref={section1Ref}>
 
           <div className='Service-Box'>
             <div className='Service-Title Service-Title-1'>
