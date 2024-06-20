@@ -1,0 +1,184 @@
+.Home-Partners {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden; 
+  background:var(--background-color);
+  transition: 1s ease;
+}
+
+/*//// Partners Section ////*/
+
+
+.Partners-Section {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Responsive grid */
+  gap: 100px;
+  max-width: 900px; /* Limit maximum width */
+  margin: 0 auto; /* Center align */
+  padding: 0 40px;
+}
+
+.logos img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure image does not exceed parent width */
+  transition: opacity 0.8s ease;
+}
+
+
+/*//// Partners Section ////*/
+
+
+/*//// Numbers Section ////*/
+
+.Numbers-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  background: linear-gradient(to bottom, var(--background-color) 50%, var(--main-background-color) 50%);
+  margin-top: 50px;
+}
+
+.number-square {
+  background: var(--main-background-color);
+  padding: 3% 5%;
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+  border: 2px solid var(--second-color);
+  box-shadow: 8px 8px 1px var(--second-color);
+}
+
+.number-square::before {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: var(--second-color);
+  position: absolute;
+  top: 52.5%;
+}
+
+.number-square::before {
+ left: 25%;
+}
+
+.number-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  position: relative; /* Added for line positioning */
+}
+
+.numbers {
+  margin-left: 5px; 
+  margin-right: 5px; 
+}
+
+.number-container span{
+  color: var(--second-color) !important; 
+}
+
+.countup{
+  color: var(--second-color) !important; 
+  font-size: 36px;
+}
+
+/*//// Numbers Section ////*/
+
+
+.hidden {
+  opacity: 0;
+}
+
+.visible .number-square {
+  animation: fadeInUp 1s forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media query for responsiveness */
+@media (max-width: 868px) {
+  .Home-Partners {
+    height: 100%;
+    background:var(--background-color);
+  }
+
+  .logos {
+    grid-template-columns: repeat(5, 1fr); /* Two logos per row on smaller screens */
+    padding: 20px 40px;
+    gap: 40px;
+  }
+  .logos img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not exceed parent width */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .Numbers-section{
+    gap: 10px;
+  }
+
+  .countup{
+    color: var(--second-color);
+    font-size: 16px;
+  }
+  
+}

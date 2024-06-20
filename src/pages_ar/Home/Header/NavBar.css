@@ -1,0 +1,322 @@
+* {
+  transition: 0.3s ease;
+}
+
+.main-nav {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.623) 0%, rgba(0, 0, 0, 0.399) 50%, rgba(0, 0, 0, 0));
+  z-index: 1000;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background: var(--main-background-color);
+  border-bottom: 2px solid var(--second-color);
+  color: rgb(214, 214, 214);
+}
+
+.right-side, .left-side {
+  display: flex;
+  align-items: center;
+}
+
+.right-side .phone-number, .right-side .email, .left-side .lang, .left-side .date-time {
+  margin-right: 15px;
+  
+}
+
+.right-side :hover, .right-side a:hover ,.left-side a:hover {
+  color: var(--second-color);
+}
+
+.social-media a, .phone-number a, .email a, .lang a {
+  
+  text-decoration: none;
+}
+
+.social-media a{
+  margin-right: 15px;
+}
+
+.lang {
+  position: relative;
+  cursor: pointer;
+}
+
+.lang button {
+  background: transparent;
+  color: white;
+  padding: 10px 4px;
+  box-shadow: none;
+}
+
+.lang button::before {
+  display: none;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 20px;
+  margin: 0 auto;
+  transition: ease 0.3s;
+  align-items: center;
+  /* background: #00150bbb; */
+}
+
+.nav-menu li {
+  padding: 5px 25px;
+  flex: 0 0 auto;
+  position: relative;
+  transition: 0.8s ease;
+}
+
+.nav-menu li a {
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-menu li:not(.nav-btn)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--second-color);
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.nav-menu li:hover::after {
+  width: 80%;
+  opacity: 1;
+}
+
+.nav-menu li:hover a {
+  transition: ease 0.3s;
+  color: var(--second-color);
+}
+
+.nav-menu li.active::after {
+  width: 70%;
+  opacity: 1;
+}
+
+.nav-menu li.active a {
+  transition: ease 0.3s;
+  color: var(--second-color);
+}
+
+.nav-btn{
+  display: none;
+}
+
+.interest-button .Interest-btn {
+  
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+.logo {
+  text-align: center;
+  transition: ease-in-out 0.3s;
+  padding: 10px;
+  width: 80px;
+  
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo img {
+  width: 100%;
+}
+
+/* Add these styles at the end of your CSS */
+
+/* Tablet and smaller screens */
+@media (max-width: 1100px) {
+  .nav-content {
+    padding: 0 30px;
+    
+  }
+
+  .nav-menu {
+    z-index: 1000;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 17, 7, 0.799);
+    width: 40%; /* Adjusted to cover more screen space */
+    height: 100vh; /* Full height of the viewport */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    transform: translateY(100%); /* Initially off-screen */
+  }
+
+  .nav-menu li {
+    padding: 10px 13px;
+  }
+
+  .nav-menu li a {
+    font-size: 16px;
+  }
+
+  .nav-menu.show {
+    display: flex;
+    transform: translateX(0); /* Slide in from the right */
+  }
+
+  .interest-button {
+    display: none;
+
+  }
+ 
+  .nav-btn{
+    display: block;
+  }
+
+  .navbtn{
+    padding: 10px 20px;
+  }
+
+  .Interest-btn {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+
+  /* Styles for the burger menu icon */
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    order: 1;
+    z-index: 1001; /* Ensure burger menu is on top */
+    margin-left: 40px;
+  }
+
+  .burger-menu div {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Styles for the burger menu icon when toggled */
+  .burger-menu.toggle div:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .burger-menu.toggle div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.toggle div:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+
+  /* Additional styles for the logo */
+  .logo {
+    order: 2;
+    transform: scale(0.8); /* Resize the logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+
+  .logo img {
+    transform: scale(1);
+    
+  }
+
+  .logo img:hover {
+    transform: scale(0.59);
+    
+  }
+
+  .top-bar {
+    flex-direction: row; /* Maintain row layout */
+    justify-content: space-between; /* Space items evenly */
+    padding: 8px 10px; /* Reduce padding */
+  }
+
+  .right-side, .left-side {
+    flex-direction: row; /* Maintain row layout */
+    align-items: center; /* Center items vertically */
+  }
+
+  .right-side .email{
+    display: none;
+  }
+
+  
+}
+@media (max-width: 900px) {
+  .right-side .phone-number,
+  .right-side .email,
+  .left-side .lang,
+  .left-side .date-time {
+    margin-right: 10px; /* Reduce margin */
+    font-size: 10px;
+  }
+
+  .social-media a {
+    margin-right: 10px; /* Reduce margin */
+    font-size: 10px;
+  }
+
+  .lang button {
+    font-size: 10px; /* Adjust font size */
+    padding: 10px;
+  }
+  .top-bar {
+    flex-direction: row; /* Maintain row layout */
+    justify-content: space-between; /* Space items evenly */
+    padding: 8px 7px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 380px) {
+  .right-side .phone-number,
+  .right-side .email,
+  .left-side .lang,
+  .left-side .date-time {
+    margin-right: 10px; /* Reduce margin */
+    font-size: 9px;
+  }
+
+  .social-media a {
+    margin-right: 10px; /* Reduce margin */
+    font-size: 9px;
+  }
+
+  .lang button {
+    font-size: 9px; /* Adjust font size */
+  }
+  .interest-button button {
+    font-size:9px;
+  }
+}
+

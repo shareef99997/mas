@@ -1,0 +1,220 @@
+.Home-Interest {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden; 
+  background-image: url('../../../Assets//Pages-images/Home_Slider1.jpg');
+  transition: 1s ease;
+}
+
+.Home-Interest::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 11, 0, 0.888);
+  z-index: 0;
+}
+
+/* info column */
+.Interest-info-column {
+  z-index: 1;
+}
+
+.Interest-info-column h2 {
+  font-size: 45px;
+  color: white;
+}
+
+.Interest-info-column p {
+  font-size: 19px;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px; 
+  margin-bottom: 20px;
+  max-width: 190px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--second-color); 
+  margin: 0 10px; 
+}
+
+.for-q {
+  color: var(--second-color);
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* Form */
+.Interest-body {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 50px;
+}
+
+.Interest-form {
+  flex: 1;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.548); 
+  z-index: 1;
+}
+
+/* Form Group */
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Form Group: Input, Select, and Textarea */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  border: none;
+  border: 2px solid #cccccc7a;
+  background: none;
+  outline: none;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--second-color);
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -20px;
+  font-size: 12px;
+  color: var(--second-color);
+}
+
+/* Form Group: Label */
+.form-group label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  
+}
+
+.form-group input:not(:focus):placeholder-shown + label,
+.form-group select:not(:focus):placeholder-shown + label,
+.form-group textarea:not(:focus):placeholder-shown + label {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 10px 250px;
+  background-color: var(--second-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 968px) {
+  .Interest-info-column h2 {
+    font-size: 35px;
+  }
+
+  .Interest-info-column p {
+    font-size: 13px;
+  }
+
+  .submit-button {
+    padding: 10px 200px;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 868px) {
+  .Interest-body {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 5px;
+  }
+
+  .Interest-info-column{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Interest-info-column h2 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .Interest-info-column p {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .Interest-info-column button {
+    font-size: 10px;
+    padding: 8px 20px;
+    margin-bottom: 50px;
+  }
+
+  .line-container {
+    display: flex;
+    align-items: center;
+    max-width: 190px;
+    margin: 20px auto;
+  }
+
+  .Interest-form {
+    
+    padding: 20px;
+  }
+
+  .form-group input,
+.form-group select,
+.form-group textarea {
+ 
+  padding: 10px 0;
+}
+
+  .submit-button {
+    padding: 10px 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Interest-info-column h2 {
+    font-size: 25px;
+  }
+
+  .Interest-info-column p {
+    font-size: 15px;
+  }
+
+  .submit-button {
+    padding: 10px 150px;
+  }
+}

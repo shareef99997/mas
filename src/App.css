@@ -1,0 +1,52 @@
+* {
+  scroll-behavior: smooth;
+  transition: 0.3s ease;
+}
+
+.up-arrow {
+  background: transparent;
+  display: none;
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it is above other elements */
+  border: none; /* Remove default border */
+  outline: none; /* Remove default outline */
+  width: 50px; /* Set the same width as the inner div */
+  height: 50px; /* Set the same height as the inner div */
+  padding: 0; /* Remove padding */
+}
+
+.scrolled-arrow {
+  display: block;
+}
+
+.arrow-button {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 100%; /* Make it take full width of the button */
+  height: 100%; /* Make it take full height of the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow-button:hover {
+  background-color: white;
+}
+
+.arrow-button img {
+  width: 20px;
+  filter: invert(1);
+}
+
+.arrow-button:hover img {
+  filter: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .arrow-button img {
+    width: 18px;
+  }
+}

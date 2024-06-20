@@ -1,0 +1,9 @@
+.Home-Work {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 82vh;
+  overflow: hidden; 
+  background: var(--background-color);
+  transition: 1s ease;
+}

@@ -1,0 +1,327 @@
+.Home-About {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  /* height: 100vh; */
+  overflow: hidden;
+  background: var(--main-background-color);
+  transition: 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.About-Body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*/////////////////// Top Section ///////////////////*/
+.about-top-section {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#about-top-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../../Assets/Images/background-lines.png') no-repeat ;
+  background-size: cover;
+  box-sizing: border-box; 
+  opacity: 0.1; 
+  pointer-events: none; 
+}
+
+.right-section,
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.img-wrapper {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.About-pic {
+  max-width: 100%;
+  height: auto;
+}
+
+.About-title-description{
+  text-align: center;
+}
+
+.About-title-description h2{
+  color: var(--second-color);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/*/////////////////// Bottom Section ///////////////////*/
+.about-bottom-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-image: url('../../../Assets//Pages-images/Home_Slider1.jpg');
+  background-size: cover;
+  background-attachment: fixed; /* Make the background fixed */
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  position: relative; /* Position relative for the pseudo-element */
+}
+
+.about-bottom-section::before {
+  content: "";
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.508);
+  z-index: 0;
+}
+
+
+.info-section {
+  width: 70%;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  background: var(--background-color-transparent);
+  border-radius: 10px 0 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: opacity 0.3s ease;
+  margin-bottom: 90px;
+  min-height: 317px;
+  align-content: center;
+  z-index: 1;
+}
+
+
+
+.about-top-section .info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.selector-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the bottom right */
+  position: absolute;
+  bottom: 0; /* Adjust this value as needed */
+}
+
+
+.selector-section button {
+  flex: 1;
+  padding: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  /* background: #f0f0f0; */
+  border: none;
+  outline: none;
+  transition: 0.5s ease;
+  box-shadow: none;
+}
+
+.selector-section button.active {
+  --button-color:linear-gradient(90deg, #695430 0%, #6b532a 50%, #695430);
+  transition: 0.5s ease;
+  box-shadow: 5px  0px rgb(80, 70, 36);
+}
+
+
+.selector-section button.active::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #fff; /* Arrow color */
+  background: transparent;
+  top: 7px; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*/////////////////// Media Queries ///////////////////*/
+
+@media (max-width: 868px) {
+  .about-top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-section,
+  .left-section {
+    order: unset;
+    width: 100%;
+  }
+
+  .left-section {
+    text-align: center;
+  }
+
+  .About-title-description h2,
+  .left-section h2 {
+    font-size: 1.2rem;
+  }
+
+
+  .About-title-description p,
+  .left-section p {
+    font-size: 0.5rem;
+  }
+  .About-title-description button,
+  .button-container button {
+    padding: 8px 15px;
+    font-size: 0.75rem;
+  }
+
+  .info-section {
+    width: 90%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-section p {
+    text-align: center;
+    min-height: 70px;
+  }
+
+  .img-wrapper{
+    max-width: 30%;
+  }
+
+  .info-section .img-wrapper {
+    max-width: 15%;
+    margin-bottom: 20px;
+  }
+
+  .about-bottom-section .info-section {
+    flex-direction: column;
+  }
+
+  .selector-section {
+    justify-content: center; /* Center buttons on smaller screens */
+    bottom: 0px; /* Adjust bottom position */
+  }
+
+  .selector-section button {
+    font-size: 0.85rem;
+  }
+
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInFromLeft 1s forwards;
+}
+
+.fade-in-right {
+  animation: fadeInFromRight 1s forwards;
+}
+
+.fade-in-top {
+  animation: fadeInFromTop 1s forwards;
+}
+
+.fade-in-bottom {
+  animation: fadeInFromBottom 1s forwards;
+}
+
+.hidden {
+  opacity: 0;
+}

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root{
+  --main-color:#002412;
+  --background-color:#f0f0f0;
+  --main-background-color:#1e1e1e;
+  --background-color-transparent:#1e1e1eec;
+  --second-color:#7e663d;
+  --button-color:#7e663d;
+  --main-gradient:linear-gradient(90deg, #000f08 0%, #001008 50%, #000f08);
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body:lang(ar), 
+body :lang(ar) {
+  direction: rtl;
+}
+
+
+body:lang(en), 
+body :lang(en) {
+  direction: ltr;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+h1{
+  font-size: 45px;
+  font-weight: 500;
+  color: #000000;
+}
+
+h2{
+  font-size: 35px;
+  color: #000000;
+  font-weight: 400;
+}
+
+h3{
+  font-size: 25px;
+  color: #000000;
+  font-weight: 500;
+}
+
+p{
+  font-size: 15px;
+  color: #efefef;
+  font-weight: 300;
+}
+
+a{
+  text-decoration: none;
+  color: #efefef;
+}
+
+button {
+  font-size:15px;
+  background: var(--button-color);
+  font-family: "Tajawal", sans-serif;
+  position: relative;
+  color: white;
+  padding: 15px 55px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 5px 5px  rgb(73, 64, 36);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: 140%;
+  width: 100%;
+  height: 200%;
+  background: #dbae5f66;
+  z-index: -1;
+  transition: transform 0.5s ease;
+  transform: skewX(45deg);
+}
+
+button:hover::before {
+  transform: translateX(-280%) skewX(45deg);
+}
+
+

@@ -1,0 +1,156 @@
+.Home-Header {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.174);
+  transition: 1s ease;
+}
+
+/*/////////////// Slider /////////////// */
+
+.img-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Place the slider behind other content */
+}
+
+.swiper {
+  width: 100%;
+  height: 100%; /* Ensure the Swiper component takes the full height */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Ensure the slide takes the full height */
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.701); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is above the image but below the text */
+  transition: 0.5s ease-in;
+}
+
+.Header-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire slider */
+  object-position: center; /* Center the image */
+  z-index: 0; /* Ensure the image is below the overlay */
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInRight {
+  0% { opacity: 1; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInFromTop {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInFromBottom {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.764);
+  padding: 10px 20px;
+  opacity: 0; /* Initial state */
+  transform: translateX(-100%); /* Initial state */
+  border-left: solid 2px rgb(103, 103, 103);
+  border-top: solid 2px rgb(103, 103, 103);
+  border-bottom: solid 2px rgb(103, 103, 103);
+}
+
+
+.slide-text.slide-in {
+  animation: slideInRight 0.8s ease-in-out forwards;
+}
+
+/*/////////////// home-content /////////////// */
+
+.Header-Content {
+  padding-top: 180px;
+  color: white; /* Make text white for visibility */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  max-width: 80%; /* Limit width for better readability */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.Header-Content h1 {
+  font-size: 3rem; /* Responsive font size */
+  margin: 0;
+  font-weight: 400;
+  color: var(--second-color);
+  transition: 1s ease-in-out;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Start position for animation */
+  animation: fadeInFromTop 0.5s ease-in-out forwards;
+  animation-delay: 0.5s; /* Delay before animation starts */
+}
+
+.Header-Content .Header-Button {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start position for animation */
+  animation: fadeInFromBottom 0.5s ease-in-out forwards;
+  animation-delay: 0.8s; /* Delay before animation starts */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Header-Content {
+    padding-top: 200px;
+    font-size: 1.5rem;
+    gap: 100px;
+  }
+
+  .Header-Button {
+    padding: 10px 30px;
+  }
+
+  .slide-text {
+    font-size: 1.0rem;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-left:none ;
+  }
+
+  .Header-Content h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
