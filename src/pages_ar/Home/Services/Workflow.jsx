@@ -96,7 +96,7 @@ export default function Workflow() {
       <h2 className="Workflow-title"> سير العمل </h2>
       <TimelineObserver
         initialColor="#e5e5e5"
-        fillColor="#7e663d"
+        fillColor="#9b8050"
         handleObserve={(setObserver) => (
           <Timeline
             callback={onCallback}

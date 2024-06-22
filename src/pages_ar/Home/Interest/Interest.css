@@ -128,7 +128,7 @@
 /* Submit Button */
 .submit-button {
   padding: 10px 250px;
-  background-color: var(--second-color);
+  background-color: var(--button-color);
   color: #fff;
   border: none;
   cursor: pointer;

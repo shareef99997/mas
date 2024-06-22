@@ -5,8 +5,8 @@
   --background-color:#f0f0f0;
   --main-background-color:#1e1e1e;
   --background-color-transparent:#1e1e1eec;
-  --second-color:#7e663d;
-  --button-color:#7e663d;
+  --second-color:#957949;
+  --button-color:#9b8050;
   --main-gradient:linear-gradient(90deg, #000f08 0%, #001008 50%, #000f08);
 }
 
@@ -78,7 +78,7 @@ button {
   border: none;
   cursor: pointer;
   z-index: 1;
-  box-shadow: 5px 5px  rgb(73, 64, 36);
+  box-shadow: 5px 5px  rgb(92, 74, 26)
 }
 
 button::before {
