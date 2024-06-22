@@ -12,6 +12,64 @@ const Work = () => {
   const [lightboxImages, setLightboxImages] = useState([]);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
+  const titleRef = useRef(null);
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
+
+  
+ useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(entry.target.dataset.animation);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const title = titleRef.current;
+    const section1 = section1Ref.current;
+    const section2 = section2Ref.current;
+    const section3 = section3Ref.current;
+
+
+    if (title) {
+      title.classList.add('hidden');
+      title.dataset.animation = 'fade-in-left';
+      observer.observe(title);
+    }
+
+    if (section1) {
+      section1.classList.add('hidden');
+      section1.dataset.animation = 'fade-in-up';
+      observer.observe(section1);
+    }
+
+    if (section2) {
+      section2.classList.add('hidden');
+      section2.dataset.animation = 'fade-in-up';
+      observer.observe(section2);
+    }
+
+    if (section3) {
+      section3.classList.add('hidden');
+      section3.dataset.animation = 'fade-in-up';
+      observer.observe(section3);
+    }
+
+
+
+    return () => {
+      if (title) observer.unobserve(title);
+      if (section1) observer.unobserve(section1);
+      if (section2) observer.unobserve(section2);
+      if (section3) observer.unobserve(section3);
+    };
+  }, []);
 
   const handleFilterClick = (filter) => {
     setActiveFilter(filter);
@@ -70,23 +128,23 @@ const Work = () => {
 
   return (
     <div className="Home-Work" id="Home-Work">
-      <h2 className="Work-section-title section-title-en">Our Work</h2>
+      <h2 className="Work-section-title section-title-en" ref={titleRef}>Our Work</h2>
       <div className='Work-section-filter'></div>
-      <ul className="portfolio-filter">
+      <ul className="portfolio-filter" ref={section1Ref}>
         <li className={`list ${activeFilter === 'All' ? 'portfolio-filter-active' : ''}`} onClick={() => handleFilterClick('All')} data-filter="All">All</li>
         <li className={`list ${activeFilter === 'Villas' ? 'portfolio-filter-active' : ''}`} onClick={() => handleFilterClick('Villas')} data-filter="Villas">Villas</li>
         <li className={`list ${activeFilter === 'Apartments' ? 'portfolio-filter-active' : ''}`} onClick={() => handleFilterClick('Apartments')} data-filter="Apartments">Apartments</li>
         <li className={`list ${activeFilter === 'Offices' ? 'portfolio-filter-active' : ''}`} onClick={() => handleFilterClick('Offices')} data-filter="Offices">Offices</li>
         <li className={`list ${activeFilter === 'Others' ? 'portfolio-filter-active' : ''}`} onClick={() => handleFilterClick('Others')} data-filter="Others">Others</li>
       </ul>
-      <div className="portfolio-container">
+      <div className="portfolio-container"ref={section2Ref}>
         {filteredItems.slice(0, visibleItems).map((item, index) => (
           <div key={item.id} className={`portfolio-box ${item.category} ${index < delayedVisibleItems ? 'show' : ''}`} onClick={() => handleImageClick(index)}>
             <img alt="" src={item.src} />
           </div>
         ))}
       </div>
-      <div className="buttons-container">
+      <div className="buttons-container" ref={section3Ref}>
         {visibleItems < filteredItems.length && (
           <button className="show-button" onClick={showMoreItems}>Show More</button>
         )}
