@@ -20,6 +20,18 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 function App() {
 
   const [scrolled, setScrolled] = useState(false);
+  const [animateWhatsApp, setAnimateWhatsApp] = useState(false);
+  useEffect(() => {
+    const animateTimer = setTimeout(() => {
+      setAnimateWhatsApp(true);
+      const revertTimer = setTimeout(() => {
+        setAnimateWhatsApp(false);
+      }, 2000); // Revert after 2 seconds
+      return () => clearTimeout(revertTimer);
+    }, 3000); // Animate after 3 seconds
+
+    return () => clearTimeout(animateTimer);
+  }, []);
 
   const scrollToHeader = () => {
     const header = document.getElementById('Header');
@@ -78,6 +90,14 @@ function App() {
   return (
     <div className="Home">
       {renderPage()}
+      <a className="whatsappa" href="https://api.whatsapp.com/send?phone=966" target="_blank" rel="noopener noreferrer">
+        <nav className={`whatsapp-button ${animateWhatsApp ? 'animate' : ''}`}>
+          <div>
+            <img src={require('./Assets/Icons/support.png')} alt="WhatsApp" />
+          </div>
+          <h3> Whatsapp </h3>
+        </nav>
+      </a>
       <button className={`up-arrow ${scrolled ? 'scrolled-arrow' : ''}`} onClick={scrollToHeader}>
         <div className="arrow-button">
           <img src={require('./Assets/Icons/up-arrow.png')} alt="Up Arrow" />

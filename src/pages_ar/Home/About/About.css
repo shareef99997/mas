@@ -38,10 +38,11 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
+  
 }
 #about-top-section{
   position: relative;
-  overflow: hidden;
+  
 }
 
 #about-top-section::before {

@@ -4,7 +4,7 @@ function Work() {
 
   return (
     <div className="Home-Work" id="Home-Work">
-      <h1>Work</h1>
+      <h1> اعمالنا </h1>
       
     </div>
   );
