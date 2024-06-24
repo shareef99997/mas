@@ -1,0 +1,113 @@
+.Home-Blog {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden; 
+  background: var(--main-background-color);
+  transition: 1s ease;
+}
+
+/* Blog Section */
+.Blog-Section {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;  /* Added padding for better spacing */
+  width: 70%;
+  padding-bottom: 100px;
+}
+
+.Blog-Box {
+  background: #ffffff0a;
+  margin: 10px;
+  position: relative;
+  box-shadow: 10px 5px  var(--second-color);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.Blog-Box:hover{
+  box-shadow: 0  5px 5px  var(--button-color);
+  background: var(--button-color);
+}
+
+.Blog-Box:hover .Blog-Title,.Blog-Box:hover .Blog-Paragraph,.Blog-Box:hover .Blog-Date {
+  color: white;
+}
+
+.Blog-Box:hover .Blog-Button {
+  background: white;
+  color: var(--second-color);
+  box-shadow: 5px 5px  rgb(77, 77, 77)
+}
+
+.Blog-Box-content{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+.Blog-Image {
+  max-width: 100%;
+  height: auto;
+  border-radius:10px 10px 0 0 ;
+}
+
+.Blog-Date {
+  font-size: 14px;
+  color: #888;
+  margin: 5px 0;
+  text-align: start;
+}
+
+.Blog-Title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #a3a3a3
+}
+
+.Blog-Paragraph {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #888
+}
+
+.Blog-Button {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 30px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .Blog-Date {
+    font-size: 8px;
+    margin:  0;
+  }
+
+  .Blog-Title {
+    font-size: 10px;
+    margin: 5px 0;
+  }
+
+  .Blog-Paragraph {
+    font-size: 8px;
+    margin: 5px 0;
+  }
+
+  .Blog-Button {
+    font-size: 7px;
+    padding: 3px 8px;
+    margin: 10px 0;
+  }
+
+  .Blog-Box-content{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+}

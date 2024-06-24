@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect ,useRef } from 'react';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
 import './Work-en.css';

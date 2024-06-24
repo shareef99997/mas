@@ -90,3 +90,16 @@
   color: white;
   margin-bottom: 20px; 
 }
+
+@media (max-width: 758px) {
+  .stepIcon {
+    width: 15%;
+    margin-bottom: 10px;
+  }
+  .stepTitle {
+    font-size: 15px; 
+  }
+  .stepDescription {
+    font-size: 10px; 
+  }
+}

@@ -1,12 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Home.css';
 import HEADER from './Header/Header';
-import SERVICES from './Services/Services';
-import WORK from './Work/Work';
 import ABOUT from './About/About';
 import PARTNERS from './Partners/Partners';
-import FOOTER from '../Home/Footer/Footer';
+import SERVICES from './Services/Services';
+import WORK from './Work/Work';
+import BLOG from './Blog/Blog';
 import INTEREST from './Interest/Interest';
+import FOOTER from '../Home/Footer/Footer';
 
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
       <PARTNERS />
       <SERVICES />
       <WORK />
+       <BLOG />
       <INTEREST />
       <FOOTER />
     </div>
