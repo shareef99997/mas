@@ -1,10 +1,8 @@
 *{
-  scroll-behavior: smooth;
-  transition: 0.3s ease;
+  transition: 1s ease;
 }
 
 .Home{
   transition: 0.5s ease;
-  
 }
 

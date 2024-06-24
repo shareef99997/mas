@@ -8,7 +8,7 @@ import '../sections-en.css';
 
 function Blog_en() {
   return (
-    <div className="Home-Blog" id="Home-Blog-en">
+    <div className="Home-Blog" id="Home-Blog">
       <h2 className="Blog-section-title section-title-en">
         Blog
       </h2>

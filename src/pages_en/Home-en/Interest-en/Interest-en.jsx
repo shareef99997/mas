@@ -56,7 +56,7 @@ function INTEREST_en() {
   };
 
   return (
-    <div className="Home-Interest-en" id="Home-Interest-en" >
+    <div className="Home-Interest-en" id="Home-Interest" >
       <h2 className="Interest-section-title section-title-en"> Register your interest </h2>
       <div className='Interest-body'>
         <div className='Interest-info-column'>
