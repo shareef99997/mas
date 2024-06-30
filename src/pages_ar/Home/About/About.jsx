@@ -11,6 +11,7 @@ function About() {
   const pRef = useRef(null);
   const buttonRef = useRef(null);
 
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

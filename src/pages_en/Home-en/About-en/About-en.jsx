@@ -3,7 +3,6 @@ import './About.css';
 
 function About_en() {
   const [activeSection, setActiveSection] = useState('section1');
-  const [prevSection, setPrevSection] = useState(null);
 
   const firstSectionRef = useRef(null);
   const secondSectionRef = useRef(null);
@@ -109,7 +108,6 @@ function About_en() {
   }, [activeSection]);
 
   const handleSectionChange = (section) => {
-    setPrevSection(activeSection);
     setActiveSection(section);
   };
 
@@ -120,7 +118,7 @@ function About_en() {
           <div className="about-top-section">
             <section className="right-section" ref={secondSectionRef}>
               <div className="img-wrapper">
-                <img className="About-pic" src={require('../../../Assets/Icons/goals.png')} alt="Section 1 Image" />
+                <img className="About-pic" src={require('../../../Assets/Icons/goals.png')} alt="Goals Icon" />
               </div>
             </section>
             <section className="left-section" ref={firstSectionRef}>
@@ -133,7 +131,7 @@ function About_en() {
           <div className="about-top-section">
             <section className="right-section" ref={secondSectionRef}>
               <div className="img-wrapper">
-                <img className="About-pic" src={require('../../../Assets/Icons/vision.png')} alt="Section 2 Image" />
+                <img className="About-pic" src={require('../../../Assets/Icons/vision.png')} alt="Vision Icon" />
               </div>
             </section>
             <section className="left-section" ref={firstSectionRef}>
@@ -146,7 +144,7 @@ function About_en() {
           <div className="about-top-section">
             <section className="right-section" ref={secondSectionRef}>
               <div className="img-wrapper">
-                <img className="About-pic" src={require('../../../Assets/Icons/message.png')} alt="Section 3 Image" />
+                <img className="About-pic" src={require('../../../Assets/Icons/message.png')} alt="Message Icon" />
               </div>
             </section>
             <section className="left-section" ref={firstSectionRef}>
