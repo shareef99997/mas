@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import TimelineObserver from "react-timeline-animation";
 import "./Workflow.css";
 
@@ -14,31 +14,30 @@ const Timeline = ({ setObserver, callback }) => {
   const circle2 = useRef(null);
   const circle3 = useRef(null);
 
-  const someCallback = () => {
+  const someCallback = useCallback(() => {
     setStep1({
       icon: require('../../../Assets/Icons/plan.png'), // Replace with the actual path to your image
       title: "Step One",
       description: "This is the first step of the process.This is the first step of the process.This is the first step of the process.",
     });
     callback();
-  };
-  
-  const someCallback2 = () => {
+  }, [callback]);
+
+  const someCallback2 = useCallback(() => {
     setStep2({
       icon: require('../../../Assets/Icons/plan.png'), // Replace with the actual path to your image
       title: "Step Two",
       description: "This is the second step of the process.This is the second step of the process.This is the second step of the process.",
     });
-  };
-  
-  const someCallback3 = () => {
+  }, []);
+
+  const someCallback3 = useCallback(() => {
     setStep3({
       icon: require('../../../Assets/Icons/plan.png'), // Replace with the actual path to your image
       title: "Finish",
       description: "This is the final step of the process.This is the final step of the process.This is the final step of the process.",
     });
-  };
-  
+  }, []);
 
   useEffect(() => {
     setObserver(timeline1.current);
@@ -47,7 +46,7 @@ const Timeline = ({ setObserver, callback }) => {
     setObserver(circle1.current, someCallback);
     setObserver(circle2.current, someCallback2);
     setObserver(circle3.current, someCallback3);
-  }, []);
+  }, [setObserver, someCallback, someCallback2, someCallback3]);
 
   const renderStep = (step) => (
     <div className="stepBox">
@@ -85,11 +84,9 @@ const Timeline = ({ setObserver, callback }) => {
 };
 
 export default function Workflow_en() {
-  
-
-  const onCallback = () => {
+  const onCallback = useCallback(() => {
     console.log("done");
-  };
+  }, []);
 
   return (
     <div className="Home-Workflow-Section">

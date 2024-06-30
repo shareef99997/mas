@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import TimelineObserver from "react-timeline-animation";
 import "./Workflow.css";
 
@@ -14,31 +14,30 @@ const Timeline = ({ setObserver, callback }) => {
   const circle2 = useRef(null);
   const circle3 = useRef(null);
 
-  const someCallback = () => {
+  const someCallback = useCallback(() => {
     setStep1({
       icon: require('../../../Assets/Icons/plan.png'), // Replace with the actual path to your image
-      title: " الخطوة الأولى ",
+      title: "الخطوة الأولى",
       description: "وجود وسيط عقاري محترف بين البائع والمشتري يساعد بشكل كبير في إنجاح الصفقة العقارية. وما يميزنا في شركة منظومة الصباح العقارية هو جودة واحترافية منتج التسويق العقاري، حيث إننا نتميز بالتسويق غير الحصري بالتعاون مع شركات تسويق عقارية ومئات المكاتب بإدارة محترفة تسهل سرعة إفراغ وكسب رضا المطور.",
     });
     callback();
-  };
-  
-  const someCallback2 = () => {
+  }, [callback]);
+
+  const someCallback2 = useCallback(() => {
     setStep2({
       icon: require('../../../Assets/Icons/plan.png'), // Replace with the actual path to your image
-      title: "الخطوة الثانية ",
+      title: "الخطوة الثانية",
       description: "وجود وسيط عقاري محترف بين البائع والمشتري يساعد بشكل كبير في إنجاح الصفقة العقارية. وما يميزنا في شركة منظومة الصباح العقارية هو جودة واحترافية منتج التسويق العقاري، حيث إننا نتميز بالتسويق غير الحصري بالتعاون مع شركات تسويق عقارية ومئات المكاتب بإدارة محترفة تسهل سرعة إفراغ وكسب رضا المطور.",
     });
-  };
-  
-  const someCallback3 = () => {
+  }, []);
+
+  const someCallback3 = useCallback(() => {
     setStep3({
       icon: require('../../../Assets/Icons/plan.png'), // Replace with the actual path to your image
-      title: "الخطوة الثالثة ",
+      title: "الخطوة الثالثة",
       description: "وجود وسيط عقاري محترف بين البائع والمشتري يساعد بشكل كبير في إنجاح الصفقة العقارية. وما يميزنا في شركة منظومة الصباح العقارية هو جودة واحترافية منتج التسويق العقاري، حيث إننا نتميز بالتسويق غير الحصري بالتعاون مع شركات تسويق عقارية ومئات المكاتب بإدارة محترفة تسهل سرعة إفراغ وكسب رضا المطور.",
     });
-  };
-  
+  }, []);
 
   useEffect(() => {
     setObserver(timeline1.current);
@@ -47,7 +46,7 @@ const Timeline = ({ setObserver, callback }) => {
     setObserver(circle1.current, someCallback);
     setObserver(circle2.current, someCallback2);
     setObserver(circle3.current, someCallback3);
-  }, []);
+  }, [setObserver, someCallback, someCallback2, someCallback3]);
 
   const renderStep = (step) => (
     <div className="stepBox">
@@ -85,15 +84,13 @@ const Timeline = ({ setObserver, callback }) => {
 };
 
 export default function Workflow() {
-  
-
-  const onCallback = () => {
+  const onCallback = useCallback(() => {
     console.log("done");
-  };
+  }, []);
 
   return (
     <div className="Home-Workflow-Section">
-      <h2 className="Workflow-title"> سير العمل </h2>
+      <h2 className="Workflow-title">سير العمل</h2>
       <TimelineObserver
         initialColor="#e5e5e5"
         fillColor="#9b8050"
