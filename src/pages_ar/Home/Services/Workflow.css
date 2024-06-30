@@ -93,6 +93,22 @@
 }
 
 @media (max-width: 758px) {
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .timeline {
+
+    width: 5px;
+
+  }
+  
+.Workflow-title {
+  font-size: 1.1rem;
+  }
+
   .stepIcon {
     width: 15%;
     margin-bottom: 10px;
@@ -101,6 +117,6 @@
     font-size: 15px; 
   }
   .stepDescription {
-    font-size: 10px; 
+    font-size: 8px; 
   }
 }

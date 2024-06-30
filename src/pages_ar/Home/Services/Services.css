@@ -124,20 +124,31 @@
   }
 }
 @media (max-width: 758px) {
-  .Home-Services-Section{
-    grid-template-columns: repeat(1, 1fr);
+
+  .Home-Services-body{
+    padding: 20px;
+  }
+
+  .Service-Title{
+    height: 100px;
+    position: relative;
   }
 
   .Service-Title h2{
-    font-size: 13px;
+    font-size: 10px;
+    padding: 5px;
   }
 
   .Service-Description p{
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .Service-Description a{
-    font-size: 10px;
+    font-size: 8px;
+  }
+
+  .Service-Description{
+    padding: 40px 10px 20px;
   }
 
 }
