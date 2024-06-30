@@ -57,25 +57,22 @@ function NavBar_en({ currentPage }) {
 
         <ul className={`nav-menu ${menuOpen ? 'show' : ''}`}>
           <li className={`${currentPage === 'home' ? 'active' : ''}`}>
-            <a href="/">Home</a>
+            <a href="/en/">Home</a>
           </li>
           <li className={`${currentPage === 'about-us' ? 'active' : ''}`}>
-            <a href="/about-us">About Us</a>
+            <a href="/en/about-us">About Us</a>
           </li>
           <li className={`${currentPage === 'services' ? 'active' : ''}`}>
-            <a href="#Home-Services">Services</a>
+            <a href="/en/services">Services</a>
           </li>
           <li className={`${currentPage === 'Work' ? 'active' : ''}`}>
-            <a href="#Home-Work">Properties</a>
-          </li>
-          <li className={`${currentPage === 'Blog' ? 'active' : ''}`}>
-            <a href="#Home-Blog"> Blog </a>
+            <a href="/en/Work">Properties</a>
           </li>
           <li className={`${currentPage === 'join-us' ? 'active' : ''}`}>
-            <a href="/join-us">Join Us</a>
+            <a href="/en/join-us">Join Us</a>
           </li>
           <li className={`${currentPage === 'contact-us' ? 'active' : ''}`}>
-            <a href="/contact-us">Contact Us</a>
+            <a href="/en/contact-us">Contact Us</a>
           </li>
           <a className='nav-btn' href="#Home-Interest">
             <button className="Interest-btn navbtn">Register Your Interest</button>

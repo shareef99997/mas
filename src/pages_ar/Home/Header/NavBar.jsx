@@ -66,13 +66,10 @@ function NavBar({ currentPage }) {
             <a href="/about-us">عن المنظومة</a>
           </li>
           <li className={`${currentPage === 'services' ? 'active' : ''}`}>
-            <a href="#Home-Services">خدماتنا</a>
+            <a href="/services">خدماتنا</a>
           </li>
           <li className={`${currentPage === 'Work' ? 'active' : ''}`}>
-            <a href="/#Home-Work">الأعمال</a>
-          </li>
-          <li className={`${currentPage === 'Blog' ? 'active' : ''}`}>
-            <a href="#Home-Blog"> المدونة </a>
+            <a href="/Work">الأعمال</a>
           </li>
           <li className={`${currentPage === 'join-us' ? 'active' : ''}`}>
             <a href="/join-us"> التوظيف </a>
