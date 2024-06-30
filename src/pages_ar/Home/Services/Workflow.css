@@ -105,8 +105,14 @@
 
   }
   
-.Workflow-title {
+  .Workflow-title {
   font-size: 1.1rem;
+  }
+  .Workflow-title::after {
+    width: 15%;
+    position: absolute;
+    bottom: -10px;
+    right: 42.5%;
   }
 
   .stepIcon {

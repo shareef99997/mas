@@ -98,4 +98,8 @@ button:hover::before {
   transform: translateX(-280%) skewX(45deg);
 }
 
-
+@media (max-width: 768px) {
+  button {
+    box-shadow: 3px 3px  rgb(92, 74, 26)
+  }
+}

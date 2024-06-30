@@ -40,7 +40,7 @@ function Blog() {
               <div className='Blog-Box-content'>
                 <div className="Blog-Date">{blog.date}</div>
                 <div className="Blog-Title">{blog.title}</div>
-                <div className="Blog-Paragraph">{blog.paragraph.substring(0, 100)}...</div>
+                <div className="Blog-Paragraph">{blog.paragraph.substring(0, 250)}...</div>
                 <button className="Blog-Button">عرض المقال</button>
               </div>
             
