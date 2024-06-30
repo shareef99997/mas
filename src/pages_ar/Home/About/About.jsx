@@ -3,7 +3,6 @@ import './About.css';
 
 function About() {
   const [activeSection, setActiveSection] = useState('section1');
-  const [prevSection, setPrevSection] = useState(null);
 
   const firstSectionRef = useRef(null);
   const secondSectionRef = useRef(null);
@@ -109,7 +108,6 @@ function About() {
   }, [activeSection]);
 
   const handleSectionChange = (section) => {
-    setPrevSection(activeSection);
     setActiveSection(section);
   };
 
@@ -120,7 +118,7 @@ function About() {
           <div className="about-top-section">
             <section className="right-section" ref={firstSectionRef}>
               <div className="img-wrapper">
-                <img className="About-pic" src={require('../../../Assets/Icons/goals.png')} alt="Section 1 Image" />
+                <img className="About-pic" src={require('../../../Assets/Icons/goals.png')} alt="Goals Icon" />
               </div>
             </section>
             <section className="left-section" ref={secondSectionRef}>
@@ -133,7 +131,7 @@ function About() {
           <div className="about-top-section">
             <section className="right-section" ref={firstSectionRef}>
               <div className="img-wrapper">
-                <img className="About-pic" src={require('../../../Assets/Icons/vision.png')} alt="Section 2 Image" />
+                <img className="About-pic" src={require('../../../Assets/Icons/vision.png')} alt="Vision Icon" />
               </div>
             </section>
             <section className="left-section" ref={secondSectionRef}>
@@ -146,11 +144,11 @@ function About() {
           <div className="about-top-section">
             <section className="right-section" ref={firstSectionRef}>
               <div className="img-wrapper">
-                <img className="About-pic" src={require('../../../Assets/Icons/message.png')} alt="Section 3 Image" />
+                <img className="About-pic" src={require('../../../Assets/Icons/message.png')} alt="Message Icon" />
               </div>
             </section>
             <section className="left-section" ref={secondSectionRef}>
-              <p>  وجود وسيط عقاري محترف بين البائع والمشتري يساعد بشكل كبير في إنجاح الصفقة العقارية. وما يميزنا في شركة منظومة الصباح العقارية هو جودة واحترافية منتج التسويق العقاري، حيث إننا نتميز بالتسويق غير الحصري بالتعاون مع شركات تسويق عقارية ومئات المكاتب بإدارة محترفة تسهل سرعة إفراغ وكسب رضا المطور. ولدينا القدرة للوصول لأكبر شريحة من العملاء المهتمين بالمجال العقاري.</p>
+              <p>وجود وسيط عقاري محترف بين البائع والمشتري يساعد بشكل كبير في إنجاح الصفقة العقارية. وما يميزنا في شركة منظومة الصباح العقارية هو جودة واحترافية منتج التسويق العقاري، حيث إننا نتميز بالتسويق غير الحصري بالتعاون مع شركات تسويق عقارية ومئات المكاتب بإدارة محترفة تسهل سرعة إفراغ وكسب رضا المطور. ولدينا القدرة للوصول لأكبر شريحة من العملاء المهتمين بالمجال العقاري.</p>
             </section>
           </div>
         );

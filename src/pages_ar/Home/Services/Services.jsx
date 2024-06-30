@@ -58,7 +58,7 @@ function Services() {
   return (
     <div className="Home-Services" id="Home-Services" >
       <h2 className='section-title' ref={titleRef}> ماذا نقدم لكم ؟ </h2>
-      <body className='Home-Services-body'>
+      <div className='Home-Services-body'>
 
         <div className='Home-Services-Section' ref={section1Ref}>
 
@@ -102,7 +102,7 @@ function Services() {
         </div>
         
         <Workflow/>
-      </body>
+      </div>
       
     </div>
   );

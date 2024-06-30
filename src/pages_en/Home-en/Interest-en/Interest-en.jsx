@@ -62,10 +62,10 @@ function INTEREST_en() {
         <div className='Interest-info-column'>
           <h2> Request or display your unit now </h2>
           <p> Unprecedented levels of quality in service </p>
-          <div class="line-container">
-            <span class="line"></span>
-            <span class="for-q"> or for inquiries </span>
-            <span class="line"></span>
+          <div className="line-container">
+            <span className="line"></span>
+            <span className="for-q"> or for inquiries </span>
+            <span className="line"></span>
           </div>
           <a href="/en/contact-us"> <button> Contact us </button> </a>
         </div>

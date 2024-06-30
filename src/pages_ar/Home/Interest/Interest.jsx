@@ -111,10 +111,10 @@ const handleSubmit = (e) => {
         <div className='Interest-info-column' ref={section1Ref}>
           <h2> إطلب او اعرض وحدك الان   </h2>
           <p> مستويات غير مسبوقة من الجودة في الخدمة </p>
-          <div class="line-container">
-            <span class="line"></span>
-            <span class="for-q"> او للإستفسارات </span>
-            <span class="line"></span>
+          <div className="line-container">
+            <span className="line"></span>
+            <span className="for-q"> او للإستفسارات </span>
+            <span className="line"></span>
           </div>
           <a href="/contact-us"> <button> تواصل معنا </button> </a>
           
