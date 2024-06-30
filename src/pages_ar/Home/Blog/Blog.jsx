@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Autoplay,Pagination   } from 'swiper/modules';
+import { Autoplay   } from 'swiper/modules';
 import blogData from '../../Blogs/blogData.js';
 import './Blog.css';
 import '../sections.css';
