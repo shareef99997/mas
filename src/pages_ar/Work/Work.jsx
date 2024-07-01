@@ -1,5 +1,5 @@
 
-import NavBar from '../Pages-nav/NavBar';
+import NavBar from '../Pages-sections/Pages-nav/NavBar';
 import './Work.css';
 import Footer from '../Home/Footer/Footer';
 import INTEREST from '../Home/Interest/Interest';

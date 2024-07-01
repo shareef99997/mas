@@ -1,5 +1,5 @@
 
-import NavBar from '../Pages-nav/NavBar';
+import NavBar from '../Pages-sections/Pages-nav/NavBar';
 import './Join-us.css';
 import Footer from '../../pages_ar/Home/Footer/Footer';
 import INTEREST from '../../pages_ar/Home/Interest/Interest';

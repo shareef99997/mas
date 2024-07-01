@@ -1,3 +1,152 @@
-.About-us-body{
-  height: 100vh;
+.About-us-body {
+  background: var(--main-background-color);
+}
+
+.About-alsabah {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  padding: 10px 50px;
+}
+
+.About-first-section {
+  flex: 1;
+  padding: 20px;
+  text-align: start; 
+  align-self: flex-start;
+}
+
+.About-first-section h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color:white ;
+}
+
+.About-first-section p {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.About-first-section button{
+  font-size: 16px;
+  padding: 10px 25px;
+}
+
+
+.About-second-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.About-second-section img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 15px 15px  var(--second-color)
+}
+
+
+.Manager-word{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  padding: 10px 50px;
+  background: white;
+}
+
+.Manager-word .About-first-section h3{
+  font-size: 50px;
+  color: black;
+}
+
+.Manager-word .About-first-section p{
+  font-size: 25px;
+  color: black;
+}
+
+.Manager-word .About-first-section h4{
+  font-size: 30px;
+  color: var(--second-color);
+}
+
+@media (max-width: 1200px) {
+  .Manager-word {
+    
+    gap: 10px;
+  }
+  .Manager-word .About-first-section h3 {
+    font-size: 30px;
+  }
+  
+  .Manager-word .About-first-section p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .Manager-word .About-first-section h4{
+    font-size: 22px;
+    text-align: start; 
+  }
+}
+
+@media (max-width: 768px) {
+  .About-alsabah {
+    flex-direction: column;
+    text-align: center; 
+    padding: 10px 30px;
+  }
+
+  .Manager-word {
+    flex-direction: column-reverse;
+    text-align: center; 
+    padding: 15px 30px;
+    gap: 10px;
+  }
+
+  .About-first-section {
+    text-align: center; 
+    padding: 10px;
+  }
+
+  .About-first-section button{
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+
+  .About-second-section {
+    padding: 10px;
+  }
+
+  .About-second-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .About-first-section h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .About-first-section p {
+    font-size: 10px;
+
+  }
+
+   .Manager-word .About-first-section h3 {
+    font-size: 20px;
+  }
+  
+  .Manager-word .About-first-section p {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .Manager-word .About-first-section h4{
+    font-size: 12px;
+    text-align: start; 
+  }
+  
 }

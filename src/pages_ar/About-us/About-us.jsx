@@ -1,13 +1,12 @@
 
-import NavBar from "../Pages-nav/NavBar";
+import NavBar from "../Pages-sections/Pages-nav/NavBar";
 import './About-us.css';
 import '../Pages.css';
 import Footer from '../../pages_ar/Home/Footer/Footer';
 import INTEREST from '../../pages_ar/Home/Interest/Interest';
-
 import { faChevronLeft, faHome} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import ABOUT_SECTION from "../Pages-sections/About-section/About-section";
 
 function About_us() {
 
@@ -38,7 +37,32 @@ function About_us() {
         
       </div>
       <div className="About-us-body" >
-        
+        <div className="About-alsabah">
+          <div className="About-first-section">
+            <h3> شركة منظومة الصباح العقارية </h3>
+            <p>  تضم شركة منظومة الصباح العقارية نخبة من المسوقين ذوي الخبرة والاحترافية العالمية، ولديها قاعدة كبيرة من  العملاء والمستثمرين في المجال العقاري، كما أنها قادرة على جذب كافة أطياف العملاء عبر مواقع التواصل الاجتماعي، كما أن لديها تعاون وثيق مع أكبر الشركات التسويقية والمكاتب العقارية في أنحاء الرياض بهدف الوصول لسرعة إفراغ وتسهيل عملية البيع (إدارة تسويق باحترافية وإتقان). 
+            </p>
+           <a href="#Manager-word"><button> كلمة رئيس مجلس الإدارة </button></a> 
+          </div>
+          <div className="About-second-section">
+            <img src={require('../../Assets/Images/about-us.jpg')} alt="" />
+          </div>
+        </div>
+
+        <ABOUT_SECTION />
+        <div className="Manager-word" id="Manager-word">
+          <div className="About-second-section">
+            <img src={require('../../Assets/Images/about-us.jpg')} alt="" />
+          </div>
+
+          <div className="About-first-section">
+              <h3> كلمة رئيس مجلس الإدارة </h3>
+              <p>  تضم شركة منظومة الصباح العقارية نخبة من المسوقين ذوي الخبرة والاحترافية العالمية، ولديها قاعدة كبيرة من  العملاء والمستثمرين في المجال العقاري، كما أنها قادرة على جذب كافة أطياف العملاء عبر مواقع التواصل الاجتماعي، كما أن لديها تعاون وثيق مع أكبر الشركات التسويقية والمكاتب العقارية في أنحاء الرياض بهدف الوصول لسرعة إفراغ وتسهيل عملية البيع (إدارة تسويق باحترافية وإتقان). 
+              </p>
+            <h4 >   رئيس مجلس الإدارة <br />   عوض سعيد الأسمري  </h4>
+          </div>
+          
+        </div>
       </div>
       <INTEREST />
       <Footer />
