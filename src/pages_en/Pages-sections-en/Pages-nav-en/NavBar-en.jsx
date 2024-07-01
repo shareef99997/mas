@@ -50,7 +50,7 @@ function NavBar_en({ currentPage }) {
       <div className="nav-content">
         <div className="logo">
           <a href="/">
-            <img src={require('../../Assets/Logo/LOGO.png')} alt="Main Logo" />
+            <img src={require('../../../Assets/Logo/LOGO.png')} alt="Main Logo" />
           </a>
         </div>
 

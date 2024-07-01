@@ -1,6 +1,6 @@
 
 import './Work.css';
-import NavBar from "../Pages-nav-en/NavBar-en";
+import NavBar from "../Pages-sections-en/Pages-nav-en/NavBar-en";
 import Footer from '../Home-en/Footer-en/Footer-en';
 import INTEREST_EN from '../Home-en/Interest-en/Interest-en';
 
