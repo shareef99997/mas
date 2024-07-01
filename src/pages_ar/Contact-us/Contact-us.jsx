@@ -1,9 +1,11 @@
 
 import './Contact-us.css';
-import NavBar from "../Home/Header/NavBar";
+import NavBar from "../Pages-nav/NavBar";
 import Footer from '../../pages_ar/Home/Footer/Footer';
 import INTEREST from '../../pages_ar/Home/Interest/Interest';
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faChevronLeft, faHome, faLeftRight} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function Contact_us() {
@@ -12,6 +14,26 @@ function Contact_us() {
     <div className="Contact-us" id="Contact-us" lang="ar">
       <div className="Contact-us-Header Page-Header">
         <NavBar currentPage="contact-us" />
+        <div className="Contact-us-header-title page-header-title">
+
+          <h2> تواصل معنا</h2>
+
+          <div className="title-nav">
+           
+          <a href="/" className="icon-link" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faHome} />
+            </a>
+
+          <FontAwesomeIcon className="arrow-link" icon={faChevronLeft}/> 
+
+          <a href="/about-us" >
+            <h5> تواصل معنا </h5>
+          </a>
+            
+
+         </div>
+
+        </div>
       </div>
       
       {/* Page Body */}

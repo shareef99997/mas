@@ -14,7 +14,7 @@ import JOINUS_EN from './pages_en/Join-us-en/Join-us-en.jsx';
 import CONTACTUS_EN from './pages_en/Contact-us-en/Contact-us-en.jsx';
 
 import React, { useState, useEffect } from 'react';
-import WORK_EN from './pages_en/Home-en/Work-en/Work-en.jsx';
+import WORK_EN from './pages_en/Work-en/Work-en.jsx';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {

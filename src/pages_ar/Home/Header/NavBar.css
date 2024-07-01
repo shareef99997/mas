@@ -21,6 +21,7 @@
 .right-side, .left-side {
   display: flex;
   align-items: center;
+  font-size: 15px;
 }
 
 .right-side .phone-number, .right-side .email, .left-side .lang, .left-side .date-time {
@@ -49,8 +50,9 @@
 .lang button {
   background: transparent;
   color: white;
-  padding: 10px 4px;
+  padding: 6px 4px;
   box-shadow: none;
+  font-size: 14px;
 }
 
 .lang button::before {
@@ -289,12 +291,12 @@
 
   .lang button {
     font-size: 10px; /* Adjust font size */
-    padding: 10px;
+    
   }
   .top-bar {
     flex-direction: row; /* Maintain row layout */
     justify-content: space-between; /* Space items evenly */
-    padding: 8px 7px; /* Reduce padding */
+    padding: 5px 7px; /* Reduce padding */
   }
 }
 
