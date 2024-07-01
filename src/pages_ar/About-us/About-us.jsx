@@ -4,14 +4,12 @@ import './About-us.css';
 import '../Pages.css';
 import Footer from '../../pages_ar/Home/Footer/Footer';
 import INTEREST from '../../pages_ar/Home/Interest/Interest';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronLeft, faHome, faLeftRight} from '@fortawesome/free-solid-svg-icons';
+
+import { faChevronLeft, faHome} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function About_us() {
-
-  library.add(faHome, faChevronLeft);
 
   return (
     <div className="About-us" id="About-us" lang="ar">

@@ -2,12 +2,16 @@
   background: rgb(0, 0, 0);
 }
 
+.Page-Header-en{
+  background: rgb(0, 0, 0);
+}
+
 
 .page-header-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 10%;
 }
 
 
@@ -43,12 +47,12 @@
   font-size: 15px;
 }
 
- .about-us-header-title h5 {
+ .page-header-title h5 {
   margin: 0 5px;
   color: white;
   transition: 0.3s;
 }
 
- .about-us-header-title h5:hover {
+ .page-header-title h5:hover {
   color: var(--second-color);
 }
