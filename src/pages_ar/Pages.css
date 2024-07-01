@@ -35,16 +35,12 @@
   margin: 0 8px;
   transition: color 0.3s ease !important; 
   color: white;
+  font-size: 15px;
 }
 
 .icon-link:hover, .arrow-link:hover {
   color: var(--second-color);
 
-}
-
-
-.arrow {
-  font-size: 15px;
 }
 
  .page-header-title h5 {
@@ -55,4 +51,19 @@
 
  .page-header-title h5:hover {
   color: var(--second-color);
+}
+
+@media (max-width: 768px) {
+  .page-header-title h2{
+    font-size: 15px;
+  }
+
+  .icon-link, .arrow-link {
+    font-size: 10px;
+  }
+
+  .page-header-title h5 {
+    font-size: 10px;
+  }
+
 }
