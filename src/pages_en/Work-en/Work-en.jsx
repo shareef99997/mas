@@ -3,10 +3,10 @@ import './Work.css';
 import NavBar from "../Pages-sections-en/Pages-nav-en/NavBar-en";
 import Footer from '../Home-en/Footer-en/Footer-en';
 import INTEREST_EN from '../Home-en/Interest-en/Interest-en';
-
 import { faChevronRight, faHome} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import WORK from '../Pages-sections-en/Work-section-en/Work-en-section';
+import PARTNERS from '../Home-en/Partners-en/Partners-en';
 
 function Work_en() {
 
@@ -35,7 +35,8 @@ function Work_en() {
 
         </div>
       </header>
-
+      <PARTNERS/>
+      <WORK/>
       <INTEREST_EN />
       <Footer />
     </div>

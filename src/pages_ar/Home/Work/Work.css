@@ -9,6 +9,10 @@
   transition: 1s ease;
 }
 
+#Home-Work{
+  background: var(--main-background-color);
+}
+
 .Work-section-filter{
   display: flex;
   justify-content: center;
@@ -22,7 +26,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  border: 1px solid rgb(237, 237, 237,0.6);
   flex-wrap: wrap;
   margin: 20px;
 }
@@ -215,5 +218,14 @@
   .portfolio-box {
     width: 40%;
     margin: 10px;
+  }
+
+  .portfolio-filter{
+    padding: 0;
+    margin-top: 0
+  }
+
+  .portfolio-filter li{
+    font-size: 0.8rem;
   }
 }

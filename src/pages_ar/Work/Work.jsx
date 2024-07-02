@@ -1,10 +1,11 @@
 
 import NavBar from '../Pages-sections/Pages-nav/NavBar';
-import './Work.css';
 import Footer from '../Home/Footer/Footer';
 import INTEREST from '../Home/Interest/Interest';
 import { faChevronLeft, faHome} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import WORK from '../Pages-sections/Work-section/Work-section';
+import PARTNERS from '../Home/Partners/Partners';
 
 function Work() {
   return (
@@ -33,7 +34,8 @@ function Work() {
         </div>
         
       </header>
-
+      <PARTNERS />
+      <WORK />
       <INTEREST />
       <Footer />
     </div>
