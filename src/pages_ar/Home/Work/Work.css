@@ -228,4 +228,8 @@
   .portfolio-filter li{
     font-size: 0.8rem;
   }
+  .show-button {
+    font-size: 0.8rem;
+    padding: 5px 25px;
+  }
 }

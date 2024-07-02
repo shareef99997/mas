@@ -42,7 +42,7 @@
 }
 
 .Footer-Section h3{
-  color: rgb(195, 195, 195);
+  color: var(--second-color);
 }
 
 .about-footer img {
@@ -138,13 +138,27 @@
     max-width: 100%;
   }
 
+  .Footer-Content li {
+    font-size: 13px;
+  }
+
+  .Footer-Content h3 {
+    font-size: 18px;
+  }
+
+  .about-footer img {
+    width: 70px;
+  }
+
   .Footer-Copyright-Content  {
     flex-direction: column;
     text-align: center;
+    
   }
 
   .Footer-Copyright-Content p {
     padding-bottom: 10px;
+    font-size: 13px;
   }
 
   .Social-Media-Buttons {
