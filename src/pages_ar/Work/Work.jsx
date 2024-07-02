@@ -24,7 +24,7 @@ function Work() {
 
           <FontAwesomeIcon className="arrow-link" icon={faChevronLeft}/> 
 
-          <a href="/about-us" >
+          <a href="/Work" >
             <h5> الأعمال </h5>
           </a>
             

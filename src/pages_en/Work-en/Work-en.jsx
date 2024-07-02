@@ -20,13 +20,13 @@ function Work_en() {
 
           <div className="title-nav">
            
-          <a href="/" className="icon-link" rel="noopener noreferrer">
+          <a href="/en/" className="icon-link" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faHome} />
             </a>
 
           <FontAwesomeIcon className="arrow-link" icon={faChevronRight}/> 
 
-          <a href="/about-us" >
+          <a href="/en/Work" >
             <h5> Work </h5>
           </a>
             

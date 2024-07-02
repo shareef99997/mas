@@ -90,6 +90,8 @@ function NavBar({ currentPage }) {
           </a>
         </div>
 
+        <div></div>
+
         <div className={`burger-menu ${menuOpen ? 'toggle' : ''}`} onClick={toggleMenu}>
           <div></div>
           <div></div>

@@ -48,13 +48,13 @@ function NavBar_en({ currentPage }) {
         </div>
       </div>
       <div className="nav-content">
-        <div className="logo">
+        <div className="logo" id='logo'>
           <a href="/">
             <img src={require('../../../Assets/Logo/LOGO.png')} alt="Main Logo" />
           </a>
         </div>
 
-        <ul className={`nav-menu ${menuOpen ? 'show' : ''}`}>
+        <ul className={`nav-menu nav-menu-en ${menuOpen ? 'show' : ''}`} >
           <li className={`${currentPage === 'home' ? 'active' : ''}`}>
             <a href="/en/">Home</a>
           </li>

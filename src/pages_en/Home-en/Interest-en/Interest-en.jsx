@@ -72,7 +72,7 @@ function INTEREST_en() {
 
         <div className='Interest-form-column'>
           <form className="Interest-form" onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="form-group form-group-en">
               <input 
                 type="text" 
                 id="fullName" 
@@ -85,7 +85,7 @@ function INTEREST_en() {
               />
               <label htmlFor="fullName">Full name</label>
             </div>
-            <div className="form-group">
+            <div className="form-group form-group-en">
               <input 
                 type="tel" 
                 id="phoneNumber" 
@@ -98,7 +98,7 @@ function INTEREST_en() {
               />
               <label htmlFor="phoneNumber">Phone number</label>
             </div>
-            <div className="form-group">
+            <div className="form-group form-group-en">
               <input 
                 type="mail" 
                 id="email" 
@@ -110,7 +110,7 @@ function INTEREST_en() {
               />
               <label htmlFor="email">Email</label>
             </div>
-            <div className="form-group">
+            <div className="form-group form-group-en">
               <input 
                 type="text" 
                 id="subject" 
@@ -122,7 +122,7 @@ function INTEREST_en() {
               />
               <label htmlFor="subject">Subject</label>
             </div>
-            <div className="form-group">
+            <div className="form-group form-group-en">
               <textarea 
                 id="message" 
                 name="message" 

@@ -1,14 +1,117 @@
 
 import './Contact-us.css';
 import NavBar from "../Pages-sections/Pages-nav/NavBar";
-import Footer from '../../pages_ar/Home/Footer/Footer';
-import INTEREST from '../../pages_ar/Home/Interest/Interest';
-
+import Footer from '../../pages_ar/Home/Footer/Footer';                
+import Interest from '../Interest-card/Interest-card';                
+// import Intrest from '../../pages_ar/Home/Interest/Interest';
 import { faChevronLeft, faHome} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import React, { useState,useRef,useEffect } from 'react';
+import emailjs from 'emailjs-com';
 
 function Contact_us() {
+
+  const titleRef = useRef(null);
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(entry.target.dataset.animation);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const title = titleRef.current;
+    const section1 = section1Ref.current;
+    const section2 = section2Ref.current;
+
+
+    if (title) {
+      title.classList.add('hidden');
+      title.dataset.animation = 'fade-in-left';
+      observer.observe(title);
+    }
+
+    if (section1) {
+      section1.classList.add('hidden');
+      section1.dataset.animation = 'fade-in-left';
+      observer.observe(section1);
+    }
+
+    if (section2) {
+      section2.classList.add('hidden');
+      section2.dataset.animation = 'fade-in-right';
+      observer.observe(section2);
+    }
+
+
+
+    return () => {
+      if (title) observer.unobserve(title);
+      if (section1) observer.unobserve(section1);
+      if (section2) observer.unobserve(section2);
+    };
+  }, []);
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    phoneNumber: '',
+    department:'',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: files ? files[0] : value,
+    }));
+  };
+  
+  // Add onFocus event handler to capture autofilled values
+  const handleAutofill = (e) => {
+    const { name, value } = e.target;
+    // Check if the value is different from the current form state
+    if (formData[name] !== value) {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
+  };
+  
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  // Send the form data using EmailJS
+  emailjs.sendForm('Contact-ID', 'Contact-template', e.target, 'api-key',)
+    .then((result) => {
+      console.log('Email sent successfully:', result.text);
+      alert('تم الإرسال بنجاح');
+      // Reset the form after successful submission
+      setFormData({
+        fullName: '',
+        phoneNumber: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    })
+    .catch((error) => {
+      console.error('Email send error:', error.text);
+    });
+};
+
 
   return (
     <div className="Contact-us" id="Contact-us" lang="ar">
@@ -26,7 +129,7 @@ function Contact_us() {
 
           <FontAwesomeIcon className="arrow-link" icon={faChevronLeft}/> 
 
-          <a href="/about-us" >
+          <a href="/contact-us" >
             <h5> تواصل معنا </h5>
           </a>
             
@@ -36,93 +139,51 @@ function Contact_us() {
         </div>
       </div>
       
-      {/* Page Body */}
-      {/* <div className='Contact-us-body Page-Body'>
-        <div className="Contact-us-title Page-title-container">
-          <h1 className="Services-title">اطلب خدمتك الآن</h1>
-          <p className="description">اطلب عرض السعر أو للإستشارات والإستفسارات</p>
-        </div>
+      <div className='Contact-us-body Page-Body'>
+        <h2 className="Interest-section-title section-title" ref={titleRef}> تواصل معنا  </h2>
+        <div className='Interest-body'>
+          <div className='Interest-form-column' ref={section2Ref}>
+            <form className="Interest-form" onSubmit={handleSubmit}>
 
-        <div className="flex-container-con">
-
-          <div className="right-column">
-            
-            <div className="contact-info">
-              <div className="social-media">
-                <a href="https://www.instagram.com/26ideasit?igsh=MTB3aG8yYjdvMHpucw%3D%3D" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
-                <a href="https://www.facebook.com/people/26ideasit/61556228715389/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a>
-                <a href="https://www.snapchat.com/add/twentysixideas?sender_web_id=90b82284-b8fa-4394-a5c0-a390106eb680&device_type=desktop&is_copy_url=true" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faSnapchat} /></a>
-                <a href="https://x.com/26ideasit?t=1Ol8-gsECv1qCCpcQ9MdQQ&s=09" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faXTwitter} /></a>
-                <a href="https://www.tiktok.com/@26ideasit?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTiktok} /></a>
-                </div>
-              <ul className="contact-details">
-                <li className="question" >
-                  <FontAwesomeIcon icon={faQuestionCircle} /><span> في خدمتكم للجواب على جميع استفسراتكم </span> 
-                </li>
-                <li className="email">
-                  <FontAwesomeIcon icon={faEnvelope} /><span> it@26ideas.sa</span>
-                </li>
-                <li className="phone" >
-                  <FontAwesomeIcon icon={faPhoneAlt} /><span> 966566664530+</span>
-                </li>
-                <li className="location" >
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /><span> المملكة العربية السعودية - الرياض
-                  </span></li>
-              </ul>
-            </div>
-            <div className="map-container">
-              <iframe title='map'
-                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d226.8030492323786!2d46.54453093601342!3d24.559887015517578!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1716969955481!5m2!1sen!2sau" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-
-          <form className="Contact-us-form" onSubmit={handleSubmit}>
-            
-            <div className="form-group">
-              <input 
-                type="text" 
-                id="fullName" 
-                name="fullName" 
-                value={formData.fullName} 
-                onInput={handleChange} 
-                onFocus={handleAutofill} 
-                required 
-                placeholder=" " 
-              />
-              <label htmlFor="fullName">الاسم الكامل</label>
-            </div>
-            <div className="form-group">
-              <input 
-                type="tel" 
-                id="phoneNumber" 
-                name="phoneNumber" 
-                value={formData.phoneNumber} 
-                onInput={handleChange} 
-                onFocus={handleAutofill} 
-                required 
-                placeholder=" " 
-              />
-              <label htmlFor="phoneNumber">رقم الهاتف</label>
-            </div>
-            <div className="form-group">
-              <input 
-                type="mail" 
-                id="email" 
-                name="email" 
-                value={formData.email} 
-                onInput={handleChange}  
-                onFocus={handleAutofill} 
-                placeholder=" " 
-              />
-              <label htmlFor="email">  البريد الإلكتروني   </label>
-            </div>
-            <div className="form-group">
+              <div className="form-group">
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  value={formData.fullName} 
+                  onInput={handleChange} 
+                  onFocus={handleAutofill} 
+                  required 
+                  placeholder=" " 
+                />
+                <label htmlFor="fullName">الاسم الكامل</label>
+              </div>
+              <div className="form-group">
+                <input 
+                  type="tel" 
+                  id="phoneNumber" 
+                  name="phoneNumber" 
+                  value={formData.phoneNumber} 
+                  onInput={handleChange} 
+                  onFocus={handleAutofill} 
+                  required 
+                  placeholder=" " 
+                />
+                <label htmlFor="phoneNumber">رقم الهاتف</label>
+              </div>
+              <div className="form-group">
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  value={formData.email} 
+                  onInput={handleChange}  
+                  onFocus={handleAutofill} 
+                  placeholder=" " 
+                />
+                <label htmlFor="email">البريد الإلكتروني</label>
+              </div>
+              <div className="form-group">
               <input 
                 type="text" 
                 id="subject" 
@@ -133,28 +194,27 @@ function Contact_us() {
                 placeholder=" " 
               />
               <label htmlFor="subject">الموضوع</label>
-            </div>
-            <div className="form-group">
-              <textarea 
-                id="message" 
-                name="message" 
-                value={formData.message} 
-                onInput={handleChange}  
-                rows="2" 
-                onFocus={handleAutofill} 
-                required 
-                placeholder=" " 
-              ></textarea>
-              <label htmlFor="message">الرسالة</label>
-            </div>
-            <button type="submit" className="submit-button">إرسال</button>
-          </form>
-
-          
+              </div>
+              <div className="form-group">
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  value={formData.message} 
+                  onInput={handleChange} 
+                  onFocus={handleAutofill} 
+                  rows="2" 
+                  required 
+                  placeholder=" " 
+                ></textarea>
+                <label htmlFor="message">الرسالة</label>
+              </div>
+              <button type="submit" className="submit-button">إرسال</button>
+            </form>
+          </div>
         </div>
-      </div> */}
-      
-      <INTEREST />
+      </div>
+
+      <Interest />
       <Footer />
     </div>
   );

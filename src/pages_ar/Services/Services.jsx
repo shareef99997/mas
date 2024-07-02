@@ -27,7 +27,7 @@ function Services() {
 
             <FontAwesomeIcon className="arrow-link" icon={faChevronLeft}/> 
 
-            <a href="/about-us" >
+            <a href="/services" >
               <h5> خدماتنا </h5>
             </a>
               

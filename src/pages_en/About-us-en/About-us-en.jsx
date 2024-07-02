@@ -20,13 +20,13 @@ function About_us_en() {
 
           <div className="title-nav">
            
-            <a href="/" className="icon-link" rel="noopener noreferrer">
+            <a href="/en/" className="icon-link" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faHome} />
             </a>
 
             <FontAwesomeIcon className="arrow-link" icon={faChevronRight}/> 
 
-            <a href="/about-us" >
+            <a href="/en/about-us" >
               <h5> About Us </h5>
             </a>
          </div>

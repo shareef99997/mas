@@ -124,7 +124,7 @@ const handleSubmit = (e) => {
         <div className='Interest-form-column' ref={section2Ref}>
           <form className="Interest-form" onSubmit={handleSubmit}>
             
-            <div className="form-group">
+            <div className="form-group ">
               <input 
                 type="text" 
                 id="fullName" 
