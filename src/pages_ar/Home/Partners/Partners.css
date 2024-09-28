@@ -161,8 +161,8 @@
   }
 
   .logos {
-    grid-template-columns: repeat(5, 1fr); /* Two logos per row on smaller screens */
-    padding: 20px 40px;
+    grid-template-columns: repeat(4, 1fr); /* Two logos per row on smaller screens */
+    padding: 20px 20px;
     gap: 40px;
   }
   .logos img {
@@ -178,7 +178,7 @@
 
   .countup{
     color: var(--second-color);
-    font-size: 16px;
+    font-size: 28px;
   }
   
 }

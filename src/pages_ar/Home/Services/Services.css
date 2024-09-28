@@ -117,10 +117,10 @@
   }
 
   .Service-Description p{
-    font-size: 12px;
+    font-size: 13px;
   }
   .Service-Description a{
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media (max-width: 758px) {
@@ -135,16 +135,16 @@
   }
 
   .Service-Title h2{
-    font-size: 10px;
+    font-size: 13px;
     padding: 5px;
   }
 
   .Service-Description p{
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .Service-Description a{
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .Service-Description{

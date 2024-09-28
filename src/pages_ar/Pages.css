@@ -55,15 +55,15 @@
 
 @media (max-width: 768px) {
   .page-header-title h2{
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .icon-link, .arrow-link {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .page-header-title h5 {
-    font-size: 10px;
+    font-size: 12px;
   }
 
 }
