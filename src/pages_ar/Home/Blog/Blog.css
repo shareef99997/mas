@@ -85,25 +85,24 @@
 
 @media (max-width: 768px) {
   .Blog-Date {
-    font-size: 8px;
+    font-size: 12px;
     margin:  0;
   }
 
   .Blog-Title {
-    font-size: 10px;
+    font-size: 15px;
     margin: 5px 0;
   }
 
   .Blog-Paragraph {
-    font-size: 8px;
+    font-size: 12px;
     margin: 5px 0;
   }
 
   .Blog-Button {
-    font-size: 7px;
-    padding: 3px 8px;
+    font-size: 12px;
+    padding: 6px 12px;
     margin: 10px 0;
-    box-shadow: 4px 4px  rgb(92, 74, 26)
   }
 
   .Blog-Box-content{

@@ -106,7 +106,7 @@
   }
   
   .Workflow-title {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   }
   .Workflow-title::after {
     width: 15%;
@@ -120,9 +120,9 @@
     margin-bottom: 10px;
   }
   .stepTitle {
-    font-size: 15px; 
+    font-size: 21px; 
   }
   .stepDescription {
-    font-size: 8px; 
+    font-size: 10px; 
   }
 }

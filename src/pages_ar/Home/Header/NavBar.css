@@ -141,7 +141,7 @@
   text-align: center;
   transition: ease-in-out 0.3s;
   padding: 10px;
-  width: 80px;
+  width: 110px;
   
 }
 
@@ -207,7 +207,7 @@
   }
 
   .nav-menu li a {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   
@@ -316,7 +316,7 @@
   .left-side .lang,
   .left-side .date-time {
     margin-right: 10px; /* Reduce margin */
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .social-media a {
@@ -341,7 +341,7 @@
   .left-side .lang,
   .left-side .date-time {
     margin-right: 10px; /* Reduce margin */
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .social-media a {
@@ -350,10 +350,10 @@
   }
 
   .lang button {
-    font-size: 9px; /* Adjust font size */
+    font-size: 11px; /* Adjust font size */
   }
   .interest-button button {
-    font-size:9px;
+    font-size:11px;
   }
 }
 

@@ -226,10 +226,10 @@
   }
 
   .portfolio-filter li{
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   .show-button {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 5px 25px;
   }
 }

@@ -202,6 +202,7 @@
     align-items: center;
   }
 
+
   .right-section,
   .left-section {
     order: unset;
@@ -214,18 +215,18 @@
 
   .About-title-description h2,
   .left-section h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
 
   .About-title-description p,
   .left-section p {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
   .About-title-description button,
   .button-container button {
     padding: 8px 15px;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .info-section {
@@ -248,8 +249,8 @@
   }
 
   .info-section .img-wrapper {
-    max-width: 15%;
-    margin-bottom: 20px;
+    max-width: 25%;
+    margin-bottom: 10px;
   }
 
   .about-bottom-section .info-section {
@@ -262,7 +263,7 @@
   }
 
   .selector-section button {
-    font-size: 0.85rem;
+    font-size: 1.3rem;
   }
 
 }

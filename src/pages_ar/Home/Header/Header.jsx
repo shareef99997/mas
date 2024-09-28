@@ -76,7 +76,7 @@ function Header() {
       </div>
 
       <div className='Header-Content'>
-        <h1> عنوان الصفحة الأولى </h1>
+        <h1> فكرة منزل العقارية </h1>
         <a href="#Home-About">
           <button className="Header-Button"> إبدأ الآن </button>
         </a>

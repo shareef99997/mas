@@ -14,7 +14,7 @@ function Blog() {
       </h2>
       <Swiper
         spaceBetween={10}
-        slidesPerView={3}
+        slidesPerView={2}
         loop={true}
         
         autoplay={{ delay: 3000,disableOnInteraction: false, }}
@@ -23,13 +23,13 @@ function Blog() {
         pagination={{ clickable: true }}
         breakpoints={{
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
           },
           768: {
             slidesPerView: 2,
           },
           0: {
-            slidesPerView:2,
+            slidesPerView:1,
           },
         }}
         className="Blog-Section"
@@ -41,7 +41,6 @@ function Blog() {
                 <div className="Blog-Date">{blog.date}</div>
                 <div className="Blog-Title">{blog.title}</div>
                 <div className="Blog-Paragraph">{blog.paragraph.substring(0, 250)}...</div>
-                <button className="Blog-Button">عرض المقال</button>
               </div>
             
           </SwiperSlide>
